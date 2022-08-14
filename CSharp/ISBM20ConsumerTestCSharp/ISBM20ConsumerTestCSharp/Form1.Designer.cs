@@ -58,17 +58,18 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(473, 522);
+            this.buttonRemove.Location = new System.Drawing.Point(458, 522);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(104, 41);
+            this.buttonRemove.Size = new System.Drawing.Size(116, 41);
             this.buttonRemove.TabIndex = 115;
-            this.buttonRemove.Text = "Remove Publiction";
+            this.buttonRemove.Text = "Remove Publication";
             this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(471, 496);
+            this.label6.Location = new System.Drawing.Point(455, 496);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 114;
@@ -76,12 +77,13 @@
             // 
             // buttonRead
             // 
-            this.buttonRead.Location = new System.Drawing.Point(363, 522);
+            this.buttonRead.Location = new System.Drawing.Point(338, 522);
             this.buttonRead.Name = "buttonRead";
-            this.buttonRead.Size = new System.Drawing.Size(104, 41);
+            this.buttonRead.Size = new System.Drawing.Size(114, 41);
             this.buttonRead.TabIndex = 113;
             this.buttonRead.Text = "Read Publication";
             this.buttonRead.UseVisualStyleBackColor = true;
+            this.buttonRead.Click += new System.EventHandler(this.buttonRead_Click);
             // 
             // label5
             // 
@@ -95,7 +97,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(358, 496);
+            this.label4.Location = new System.Drawing.Point(335, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 111;
@@ -104,7 +106,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(249, 496);
+            this.label3.Location = new System.Drawing.Point(213, 496);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 110;
@@ -112,19 +114,19 @@
             // 
             // buttonCloseSession
             // 
-            this.buttonCloseSession.Location = new System.Drawing.Point(583, 522);
+            this.buttonCloseSession.Location = new System.Drawing.Point(580, 522);
             this.buttonCloseSession.Name = "buttonCloseSession";
-            this.buttonCloseSession.Size = new System.Drawing.Size(103, 41);
+            this.buttonCloseSession.Size = new System.Drawing.Size(116, 41);
             this.buttonCloseSession.TabIndex = 109;
-            this.buttonCloseSession.Text = "Close Seesion";
+            this.buttonCloseSession.Text = "Close Session";
             this.buttonCloseSession.UseVisualStyleBackColor = true;
             this.buttonCloseSession.Click += new System.EventHandler(this.buttonCloseSession_Click);
             // 
             // buttonOpenSession
             // 
-            this.buttonOpenSession.Location = new System.Drawing.Point(254, 522);
+            this.buttonOpenSession.Location = new System.Drawing.Point(216, 522);
             this.buttonOpenSession.Name = "buttonOpenSession";
-            this.buttonOpenSession.Size = new System.Drawing.Size(103, 41);
+            this.buttonOpenSession.Size = new System.Drawing.Size(116, 41);
             this.buttonOpenSession.TabIndex = 108;
             this.buttonOpenSession.Text = "Open Session";
             this.buttonOpenSession.UseVisualStyleBackColor = true;

@@ -54,5 +54,32 @@ namespace ISBM20ConsumerTestCSharp
             textBoxReasonPhrase.Text = myCloseSubscriptionSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myCloseSubscriptionSessionResponse.ISBMHTTPResponse;
         }
+
+        private void buttonRead_Click(object sender, EventArgs e)
+        {
+            ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
+            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationServices.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
+
+            textBoxStatusCode.Text = myReadPublicationResponse.StatusCode.ToString();
+            textBoxReasonPhrase.Text = myReadPublicationResponse.ReasonPhrase;
+            textBoxResponse.Text = myReadPublicationResponse.ISBMHTTPResponse;
+
+            textBoxMessageID.Text = myReadPublicationResponse.MessageID;
+            textBoxTopic.Text = myReadPublicationResponse.Topic;
+            textBoxBOD.Text = myReadPublicationResponse.MessageContent;
+        }
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
+            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationServices.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
+
+            textBoxStatusCode.Text = myRemovePublicationResponse.StatusCode.ToString();
+            textBoxReasonPhrase.Text = myRemovePublicationResponse.ReasonPhrase;
+            textBoxResponse.Text = myRemovePublicationResponse.ISBMHTTPResponse;
+
+            textBoxBOD.Text = "";
+            textBoxMessageID.Text = "";
+            textBoxTopic.Text= "";
+        }
     }
 }
