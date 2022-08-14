@@ -83,7 +83,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\ISMB-2.0-Client-Adapter-CSharp\ISBM20ClientAdapter\ISBM20ClientAdapter.csproj">
+    <ProjectReference Include="..\..\..\..\ISBM-2.0-Client-Adapter-CSharp\ISBM20ClientAdapter\ISBM20ClientAdapter.csproj">
       <Project>{634d46c6-bc1b-48a7-86ed-1f6cd0529e2e}</Project>
       <Name>ISBM20ClientAdapter</Name>
     </ProjectReference>

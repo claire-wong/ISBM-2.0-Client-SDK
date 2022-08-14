@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBM20ProdviderTestCSharp", "ISBM20ProdviderTestCSharp\ISBM20ProdviderTestCSharp.csproj", "{4549E89B-2D97-481C-8C80-BE7D6F4A6E1B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBM20ClientAdapter", "..\..\..\ISMB-2.0-Client-Adapter-CSharp\ISBM20ClientAdapter\ISBM20ClientAdapter.csproj", "{634D46C6-BC1B-48A7-86ED-1F6CD0529E2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ISBM20ClientAdapter", "..\..\..\ISBM-2.0-Client-Adapter-CSharp\ISBM20ClientAdapter\ISBM20ClientAdapter.csproj", "{634D46C6-BC1B-48A7-86ED-1F6CD0529E2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
