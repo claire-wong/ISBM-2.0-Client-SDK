@@ -1,11 +1,10 @@
-﻿/* Purpose: This is a simple application that acts as an ISBM publication provider.
- *          It demonstrates the idea of using open standards to publish messages
- *          using an ISBM adapter. This .net core UWP app interacts with an ISBM adapter that's
- *          compatible with ISBM 2.0. It should be interoperable with other ISBM adapters
- *          regardless of the actual service bus that delivers the messages.  
+﻿/* Purpose: This is a simple application that acts as an ISBM publication Consumer.
+ *          It demonstrates the idea of using an ISBM Client Adapter to read publication 
+ *          from an ISBM Server Adapter. It should be interoperable with any ISBM compatible
+ *          adapters regardless of the actual service bus that delivers the messages.  
  *          
  * Author: Claire Wong
- * Date Created:  2020/05/02
+ * Date Created:  2020/08/15
  * 
  * (c) 2022
  * This code is licensed under MIT license
@@ -35,9 +34,11 @@ namespace ISBM20ConsumerTestCSharp
 
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adaper method
             ConsumerPublicationServices myConsumerPublicationService = new ConsumerPublicationServices();
             OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text);
 
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenSubscriptionSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myOpenSubscriptionSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myOpenSubscriptionSessionResponse.ISBMHTTPResponse;
@@ -47,9 +48,11 @@ namespace ISBM20ConsumerTestCSharp
 
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adaper method
             ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
             CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationServices.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text);
 
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseSubscriptionSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myCloseSubscriptionSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myCloseSubscriptionSessionResponse.ISBMHTTPResponse;
@@ -57,29 +60,35 @@ namespace ISBM20ConsumerTestCSharp
 
         private void buttonRead_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adaper method
             ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
             ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationServices.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
 
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myReadPublicationResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myReadPublicationResponse.ReasonPhrase;
             textBoxResponse.Text = myReadPublicationResponse.ISBMHTTPResponse;
 
-            textBoxMessageID.Text = myReadPublicationResponse.MessageID;
-            textBoxTopic.Text = myReadPublicationResponse.Topic;
-            textBoxBOD.Text = myReadPublicationResponse.MessageContent;
+            if (myReadPublicationResponse.StatusCode == 200)
+            {
+                textBoxMessageID.Text = myReadPublicationResponse.MessageID;
+                textBoxTopic.Text = myReadPublicationResponse.Topic;
+                textBoxBOD.Text = myReadPublicationResponse.MessageContent;
+            }
         }
         private void buttonRemove_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adaper method
             ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
             RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationServices.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
 
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myRemovePublicationResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myRemovePublicationResponse.ReasonPhrase;
             textBoxResponse.Text = myRemovePublicationResponse.ISBMHTTPResponse;
 
             textBoxBOD.Text = "";
             textBoxMessageID.Text = "";
-            textBoxTopic.Text= "";
         }
     }
 }

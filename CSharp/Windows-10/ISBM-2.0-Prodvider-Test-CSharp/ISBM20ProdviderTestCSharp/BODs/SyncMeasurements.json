@@ -14,7 +14,7 @@
         {
           "measurementLocation": {
             "UUID": "6EEBDB09-39EC-4E40-9FD9-3864FD49B0DB",
-            "ShortName": "Outlet Water Level",
+            "ShortName": "Headwater Elevation",
             "infoSource": { "UUID": "9B005C91-A36F-4D69-A3ED-CC51E78E3A66" }
           },
           "measurement": [
@@ -25,7 +25,7 @@
               "infoSource": { "UUID": "9b005c91-a36f-4d69-a3ed-cc51e78e3a66" },
               "data": {
                 "measure": {
-                  "value": "28.03"
+                  "value": "3.88"
                   },
                   "UnitOfMeasure": {
                     "UUID": "D4065BC6-2413-4CFA-8FE3-6470CB92A121",

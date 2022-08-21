@@ -1,11 +1,10 @@
-﻿/* Purpose: This is a simple application that acts as an ISBM publication provider.
- *          It demonstrates the idea of using open standards to publish messages
- *          using an ISBM adapter. This .net core UWP app interacts with an ISBM adapter that's
- *          compatible with ISBM 2.0. It should be interoperable with other ISBM adapters
- *          regardless of the actual service bus that delivers the messages.  
+﻿/* Purpose: This is a simple application that acts as an ISBM publication Provider.
+ *          It demonstrates the idea of using an ISBM Client Adapter to post publication 
+ *          to an ISBM Server Adapter. It should be interoperable with any ISBM compatible
+ *          adapters regardless of the actual service bus that delivers the messages.  
  *          
  * Author: Claire Wong
- * Date Created:  2020/05/02
+ * Date Created:  2020/08/15
  * 
  * (c) 2022
  * This code is licensed under MIT license
@@ -26,7 +25,7 @@ using ISBM20ClientAdapter;
 using ISBM20ClientAdapter.ResponseType;
 
 
-namespace Provider_Test
+namespace ISBM20ProviderTestCSharp
 {
     public partial class Form1 : Form
     {
@@ -43,9 +42,11 @@ namespace Provider_Test
 
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
             OpenPublicationSessionResponse myOpenPublicationSessionResponse = myProviderPublicationService.OpenPublicationSession(textBoxHostName.Text, textBoxChannelId.Text);
-
+            
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenPublicationSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myOpenPublicationSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myOpenPublicationSessionResponse.ISBMHTTPResponse;
@@ -55,9 +56,11 @@ namespace Provider_Test
 
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
             ClosePublicationSessionResponse myClosePublicationSessionResponse = myProviderPublicationService.ClosePublicationSession(textBoxHostName.Text, textBoxSessionId.Text);
 
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myClosePublicationSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myClosePublicationSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myClosePublicationSessionResponse.ISBMHTTPResponse;
@@ -66,9 +69,11 @@ namespace Provider_Test
 
             private void buttonPushlish_Click(object sender, EventArgs e)
         {
+            //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
             PostPublicationResponse myPostPublicationResponse = myProviderPublicationService.PostPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBOD.Text);
-            
+
+            //ISBM Adapter Response
             textBoxStatusCode.Text = myPostPublicationResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myPostPublicationResponse.ReasonPhrase;
             textBoxResponse.Text = myPostPublicationResponse.ISBMHTTPResponse;
