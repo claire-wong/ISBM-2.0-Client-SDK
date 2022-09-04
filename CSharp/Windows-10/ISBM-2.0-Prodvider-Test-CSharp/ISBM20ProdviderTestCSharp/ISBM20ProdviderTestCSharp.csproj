@@ -33,9 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ISBM20ClientAdapterStandard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="ISBM20ClientAdapterStandard20, Version=0.1.0.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>Packages\ISBM20ClientAdapterStandard\netstandard2.0\ISBM20ClientAdapterStandard.dll</HintPath>
+      <HintPath>..\..\ISBM-2.0-Consumer-Test-CSharp\ISBM20ConsumerTestCSharp\Packages\ISBM20ClientAdapterStandard\netstandard2.0\ISBM20ClientAdapterStandard20.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

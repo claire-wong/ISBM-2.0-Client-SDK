@@ -4,7 +4,7 @@
  *          adapters regardless of the actual service bus that delivers the messages.  
  *          
  * Author: Claire Wong
- * Date Created:  2020/08/15
+ * Date Created:  2022/08/15
  * 
  * (c) 2022
  * This code is licensed under MIT license
@@ -35,7 +35,7 @@ namespace ISBM20ConsumerTestCSharp
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationServices myConsumerPublicationService = new ConsumerPublicationServices();
+            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
             OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text);
 
             //ISBM Adapter Response
@@ -49,8 +49,8 @@ namespace ISBM20ConsumerTestCSharp
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
-            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationServices.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text);
+            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
+            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationService.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseSubscriptionSessionResponse.StatusCode.ToString();
@@ -61,8 +61,8 @@ namespace ISBM20ConsumerTestCSharp
         private void buttonRead_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
-            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationServices.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
+            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
+            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationService.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myReadPublicationResponse.StatusCode.ToString();
@@ -79,8 +79,8 @@ namespace ISBM20ConsumerTestCSharp
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationServices myConsumerPublicationServices = new ConsumerPublicationServices();
-            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationServices.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
+            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
+            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationService.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myRemovePublicationResponse.StatusCode.ToString();

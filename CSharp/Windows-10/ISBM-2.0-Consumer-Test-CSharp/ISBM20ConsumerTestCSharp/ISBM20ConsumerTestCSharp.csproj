@@ -33,9 +33,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ISBM20ClientAdapterStandard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Packages\ISBM20ClientAdapterStandard\netstandard2.0\ISBM20ClientAdapterStandard.dll</HintPath>
+    <Reference Include="ISBM20ClientAdapterStandard20">
+      <HintPath>Packages\ISBM20ClientAdapterStandard\netstandard2.0\ISBM20ClientAdapterStandard20.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

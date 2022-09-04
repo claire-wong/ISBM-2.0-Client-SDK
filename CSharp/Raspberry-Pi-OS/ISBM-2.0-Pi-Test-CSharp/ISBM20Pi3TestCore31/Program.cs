@@ -1,0 +1,162 @@
+﻿/* Purpose: This is a simple application that acts as an ISBM publication Provider.
+ *          It demonstrates an IoT device using an ISBM Client Adapter to post-publication
+ *          to an ISBM Server Adapter. It is interoperable with any ISBM compatible adapters
+ *          regardless of the actual service bus that delivers the messages.
+ *          
+ * Remarks: 1. This is an .Net Core 3.1 project that targets Raspberry Pi OS for deployment.
+ *          2. This demo does not close publication session for simpliclty. It behaves as power
+ *             loss when the program exits. 
+ *          
+ * Author: Pak Wong
+ * Date Created:  2022/08/31
+ * 
+ * (c) 2022
+ * This code is licensed under MIT license
+*/
+
+using System;
+using System.Threading;
+using ISBM20ClientAdapter;
+using ISBM20ClientAdapter.ResponseType;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+
+namespace ISBM20Pi3TestCore21
+{
+    class Program
+    {
+        static string _hostName = "";
+        static string _channelId = "";
+        static string _topic = "";
+        static string _sessionId = "";
+
+        static Boolean _authentication;
+        static string _username = "";
+        static string _password = "";
+
+        static string _bodTemplate = "";
+
+        static ProviderPublicationService _myProviderPublicationService = new ProviderPublicationService();
+
+        static void Main(string[] args)
+        {
+
+            SetConfigurations();
+            GetBODTemplate();
+
+            //Open an Provider Publication Session
+            OpenPublicationSessionResponse myOpenPublicationSessionResponse = _myProviderPublicationService.OpenPublicationSession(_hostName, _channelId);
+            Console.WriteLine("Host Address " + _hostName);
+            Console.WriteLine("Channel Id " + _channelId);
+
+
+            if (myOpenPublicationSessionResponse.StatusCode == 201)
+            {
+                //SessionID is stored in a class level valuable for repeatedly used in every BPD post publication.
+                _sessionId = myOpenPublicationSessionResponse.SessionID;
+                Console.WriteLine("Publication Session " + _sessionId);
+                Console.WriteLine("ISBM 2.0 IoT Device is ready!!");
+            }
+            else
+            {
+                Console.WriteLine(myOpenPublicationSessionResponse.StatusCode + " " + myOpenPublicationSessionResponse.ISBMHTTPResponse);
+                Console.WriteLine("Please check configurations!!");
+            }
+
+            Thread.Sleep(1000);
+
+            while (true)
+            {
+                PublishBOD();
+                Thread.Sleep(5000);
+            }
+
+
+        }
+
+        private static void SetConfigurations()
+        {
+            //Read application configurations from Configs.json 
+            string filename = "Configs.json";
+
+            string JsonFromFile = System.IO.File.ReadAllText(filename);
+
+            JObject JObjectConfigs = JObject.Parse(JsonFromFile);
+            _hostName = JObjectConfigs["hostName"].ToString();
+            _channelId = JObjectConfigs["channelId"].ToString();
+            _topic = JObjectConfigs["topic"].ToString();
+
+            _authentication = (Boolean)JObjectConfigs["authentication"];
+            if (_authentication == true)
+            {
+                _username = JObjectConfigs["userName"].ToString();
+                _password = JObjectConfigs["password"].ToString();
+            }
+        }
+
+        private static void GetBODTemplate()
+        {
+            string filename = "SyncMeasurements.json";
+
+            string JsonFromFile = System.IO.File.ReadAllText(filename);
+
+            _bodTemplate = JsonFromFile;
+        }
+
+        private static void PublishBOD()
+        {
+
+            //Create new BOD message from SyncMeasurements use case template
+            string bodMessage = FillBODFields(_bodTemplate);
+
+            //Post Publication - BOD message
+            PostPublicationResponse myPostPublicationResponse = _myProviderPublicationService.PostPublication(_hostName, _sessionId, _topic, bodMessage);
+
+            string MessageId = "";
+            if (myPostPublicationResponse.StatusCode == 201)
+            {
+                MessageId = myPostPublicationResponse.MessageID;
+                Console.WriteLine("Message " + MessageId + " has been pusblished!!");
+            }
+            else
+            {
+                Console.WriteLine(myPostPublicationResponse.StatusCode + " " + myPostPublicationResponse.ISBMHTTPResponse);
+            }
+
+        }
+
+        private static string FillBODFields(string bodTemplate)
+        {
+
+            //Create a sim value
+            //-------------------------------------------------
+            Random myRandom = new Random();
+            double randomValue = (double)myRandom.Next(1, 100);
+
+            double simMeasurement = randomValue / 100 + 8;
+            //-------------------------------------------------
+
+            JObject objBOD = JObject.Parse(_bodTemplate);
+
+            objBOD["syncMeasurements"]["applicationArea"]["bODID"] = System.Guid.NewGuid().ToString();
+            objBOD["syncMeasurements"]["applicationArea"]["creationDateTime"] = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
+
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurementLocation"]["UUID"] = "6EEBDB09-39EC-4E40-9FD9-3864FD49B0DB";
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurementLocation"]["shortName"] = "Headwater Elevation";
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurementLocation"]["infoSource"]["UUID"] = "9B005C91-A36F-4D69-A3ED-CC51E78E3A66";
+
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["UUID"] = System.Guid.NewGuid().ToString();
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["recorded"]["dateTime"] = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:ssZ");
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["infoSource"]["UUID"] = "9B005C91-A36F-4D69-A3ED-CC51E78E3A66";
+
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["data"]["measure"]["value"] = simMeasurement;
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["data"]["measure"]["unitOfMeasure"]["UUID"] = "73e8145d-7a92-49ef-9b10-6162a06f7876";
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["data"]["measure"]["unitOfMeasure"]["shortName"] = "Feet";
+            objBOD["syncMeasurements"]["dataArea"]["measurements"][0]["measurement"][0]["data"]["measure"]["unitOfMeasure"]["infoSource"]["UUID"] = "cf3f3a8a-1e42-4f15-9288-9cf2241e163d";
+
+            return objBOD.ToString(Newtonsoft.Json.Formatting.None);
+        }
+
+       
+    }
+}

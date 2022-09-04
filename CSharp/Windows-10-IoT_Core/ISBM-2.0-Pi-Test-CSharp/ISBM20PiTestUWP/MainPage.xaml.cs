@@ -7,9 +7,12 @@
  *          2. This demo does not close publication session for simpliclty. It behaves as power
  *             loss when the program exits. 
  *          
+ * Author: Pak Wong
+ * Date Created:  2022/08/23
  * 
+ * (c) 2022
+ * This code is licensed under MIT license
 */
-
 
 using System;
 using System.Collections.Generic;

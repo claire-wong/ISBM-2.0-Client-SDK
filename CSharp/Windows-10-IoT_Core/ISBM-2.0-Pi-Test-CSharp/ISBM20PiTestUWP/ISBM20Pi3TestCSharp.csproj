@@ -163,9 +163,8 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="ISBM20ClientAdapterStandard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Packages\ISBM20ClientAdapter\netstandard2.0\ISBM20ClientAdapterStandard.dll</HintPath>
+    <Reference Include="ISBM20ClientAdapterStandard20">
+      <HintPath>Packages\ISBM20ClientAdapter\netstandard2.0\ISBM20ClientAdapterStandard20.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
