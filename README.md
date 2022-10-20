@@ -9,5 +9,3 @@ Since OIIE involves multiple industry standards at different levels of the techn
 ### Architecture Diagram
 
 ![image](/Documents/Images/Architecture_Diagram.jpg)
-
-Documents/Images
