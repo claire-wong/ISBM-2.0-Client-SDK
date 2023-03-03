@@ -1,0 +1,31 @@
+{
+  "$schema": "http://www.mimosa.org/ccom4/BOD/GetMeasurements.json",
+  "getMeasurements": {
+    "releaseID": "9.0",
+    "versionID": "1.0",
+    "applicationArea": {
+      "sender": {
+        "logicalID": "466aa22b-ffce-4ea0-acf4-587e372d7ba5"
+      },
+      "creationDateTime": "2019-05-25T13:13:32Z",
+      "bODID": "faeaa40b-8d87-4951-9c71-4419808533d3",
+      "userArea": {
+        "lastNData": 3
+      }
+    },
+    "dataArea": {
+      "get": {},
+      "measurementsCriteria": [
+        {
+          "measurementLocationUUID": { "value": "e015177c-8281-576b-56a9-87c16c3d91cc" },
+          "recorded": [
+            {
+              "@type": "MinInclusive",
+              "value": "2019-05-25T13:13:32Z"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

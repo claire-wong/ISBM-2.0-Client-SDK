@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://www.mimosa.org/ccom4/BOD/ShowMeasurements.json#",
+  "type": "object",
+  "properties": {
+    "showMeasurements": {
+      "description": "Response returning 0 to N measurements or the number of measurements resulting from the request.",
+      "type": "object",
+      "allOf": [ { "$ref": "http://www.mimosa.org/ccom4/OAGIS_9.json#/definitions/BusinessObjectDocumentType" } ],
+      "properties": {
+        "releaseID": {},
+        "versionID": {},
+        "systemEnvironmentCode": {},
+        "langaugeCode": {},
+        "applicationArea": {},
+        "dataArea": {
+          "properties": {
+            "show": { "$ref": "http://www.mimosa.org/ccom4/OAGIS_9.json#/definitions/ShowType" },
+            "measurements": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "count": { 
+                    "$ref": "http://www.mimosa.org/ccom4/CoreComponentType_2p0.json#/definitions/NumericType"
+                  },
+                  "measurement": { 
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                    "$ref": "http://www.mimosa.org/ccom4/CCOMElements.json#/definitions/ConcreteMeasurementClasses"
+                    }
+                  }                
+                }
+              },
+              "minItems": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "required": [ "releaseID", "versionID", "applicationArea", "dataArea" ],
+      "additionalProperties": false
+    }
+  },
+  "required": [ "showMeasurements" ],
+  "additionalProperties": { "patternProperties": { "^[$].*$": {} } }
+}
