@@ -61,7 +61,7 @@ namespace ISBM20Pi3RequestTestCore31
                 if (myProviderRequestServiceResponse.StatusCode == 201)
                 {
                     _sessionId = myProviderRequestServiceResponse.SessionID;
-                    Console.WriteLine("Provider Request Session is opened sucessfully!" + _sessionId);
+                    Console.WriteLine("Provider Request Session is opened sucessfully!");
                     Console.WriteLine("Session Id : " + _sessionId);
                     Console.WriteLine(" ");
                 }
@@ -121,6 +121,9 @@ namespace ISBM20Pi3RequestTestCore31
                 {
                     Console.WriteLine("A resoponse is posted sucessfully!");
                     Console.WriteLine("Message Id : " + myPostResponseResponse.MessageID);
+                    Console.WriteLine(" ");
+                    JObject JObjectBodTemplate = JObject.Parse(_bodTemplate);
+                    Console.WriteLine("Message Content : " + JObjectBodTemplate.ToString(Formatting.Indented));
                     Console.WriteLine(" ");
                 }
                 else
