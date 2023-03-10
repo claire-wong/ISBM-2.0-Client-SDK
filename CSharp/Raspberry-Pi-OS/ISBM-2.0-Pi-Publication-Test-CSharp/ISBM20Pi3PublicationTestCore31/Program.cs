@@ -45,7 +45,7 @@ namespace ISBM20Pi3TestCore21
             GetBODTemplate();
 
             //Open an Provider Publication Session
-            OpenPublicationSessionResponse myOpenPublicationSessionResponse = _myProviderPublicationService.OpenPublicationSession(_hostName, _channelId);
+            OpenPublicationSessionResponse myOpenPublicationSessionResponse = _myProviderPublicationService.OpenPublicationSession(_hostName, _channelId, _username, _password);
             Console.WriteLine("Host Address " + _hostName);
             Console.WriteLine("Channel Id " + _channelId);
 
@@ -110,7 +110,7 @@ namespace ISBM20Pi3TestCore21
             string bodMessage = FillBODFields(_bodTemplate);
 
             //Post Publication - BOD message
-            PostPublicationResponse myPostPublicationResponse = _myProviderPublicationService.PostPublication(_hostName, _sessionId, _topic, bodMessage);
+            PostPublicationResponse myPostPublicationResponse = _myProviderPublicationService.PostPublication(_hostName, _sessionId, _topic, bodMessage, _username, _password);
 
             string MessageId = "";
             if (myPostPublicationResponse.StatusCode == 201)

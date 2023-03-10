@@ -44,7 +44,7 @@ namespace ISBM20ProviderTestCSharp
         {
             //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            OpenPublicationSessionResponse myOpenPublicationSessionResponse = myProviderPublicationService.OpenPublicationSession(textBoxHostName.Text, textBoxChannelId.Text);
+            OpenPublicationSessionResponse myOpenPublicationSessionResponse = myProviderPublicationService.OpenPublicationSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxUserName.Text, textBoxPassword.Text);
             
             //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenPublicationSessionResponse.StatusCode.ToString();
@@ -58,7 +58,7 @@ namespace ISBM20ProviderTestCSharp
         {
             //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            ClosePublicationSessionResponse myClosePublicationSessionResponse = myProviderPublicationService.ClosePublicationSession(textBoxHostName.Text, textBoxSessionId.Text);
+            ClosePublicationSessionResponse myClosePublicationSessionResponse = myProviderPublicationService.ClosePublicationSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myClosePublicationSessionResponse.StatusCode.ToString();
@@ -71,7 +71,7 @@ namespace ISBM20ProviderTestCSharp
         {
             //Calling ISBM Adapter method
             ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            PostPublicationResponse myPostPublicationResponse = myProviderPublicationService.PostPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBOD.Text);
+            PostPublicationResponse myPostPublicationResponse = myProviderPublicationService.PostPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBOD.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myPostPublicationResponse.StatusCode.ToString();

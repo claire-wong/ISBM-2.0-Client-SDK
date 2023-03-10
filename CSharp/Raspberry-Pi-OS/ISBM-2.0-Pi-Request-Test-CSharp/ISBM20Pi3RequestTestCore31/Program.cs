@@ -55,7 +55,7 @@ namespace ISBM20Pi3RequestTestCore31
             if (key == "Enter")
             {
                 //Calling ISBM Adapter method
-                OpenProviderRequestSessionResponse myProviderRequestServiceResponse = _myProviderRequestService.OpenProviderRequestSession(_hostName, _channelId, _topic);
+                OpenProviderRequestSessionResponse myProviderRequestServiceResponse = _myProviderRequestService.OpenProviderRequestSession(_hostName, _channelId, _topic, _username, _password);
 
                 //ISBM Adapter Response
                 if (myProviderRequestServiceResponse.StatusCode == 201)
@@ -87,7 +87,7 @@ namespace ISBM20Pi3RequestTestCore31
                 if (key == "Enter")
                 {
                     //Calling ISBM Adaper method
-                    myReadRequestResponse = _myProviderRequestService.ReadRequest(_hostName, _sessionId);
+                    myReadRequestResponse = _myProviderRequestService.ReadRequest(_hostName, _sessionId, _username, _password);
 
                     //ISBM Adapter Response
                     if (myReadRequestResponse.StatusCode == 200)
@@ -114,7 +114,7 @@ namespace ISBM20Pi3RequestTestCore31
             if (key == "Enter")
             {
                 //Calling ISBM Adapter method
-                PostResponseResponse myPostResponseResponse = _myProviderRequestService.PostResponse(_hostName, _sessionId, _requestMessageId, _bodTemplate);
+                PostResponseResponse myPostResponseResponse = _myProviderRequestService.PostResponse(_hostName, _sessionId, _requestMessageId, _bodTemplate, _username, _password);
 
                 //ISBM Adapter Response
                 if (myPostResponseResponse.StatusCode == 201)
@@ -140,7 +140,7 @@ namespace ISBM20Pi3RequestTestCore31
             if (key == "Enter")
             {
                 //Calling ISBM Adaper method
-                RemoveRequestResponse myRemoveRequestResponse = _myProviderRequestService.RemoveRequest(_hostName, _sessionId);
+                RemoveRequestResponse myRemoveRequestResponse = _myProviderRequestService.RemoveRequest(_hostName, _sessionId, _username, _password);
 
                 //ISBM Adapter Response
                 if (myRemoveRequestResponse.StatusCode == 204)
@@ -162,7 +162,7 @@ namespace ISBM20Pi3RequestTestCore31
             if (key == "Enter")
             {
                 //Calling ISBM Adaper method
-                CloseProviderRequestSessionResponse myCloseProviderRequestSessionResponse = _myProviderRequestService.CloseProviderRequestSession(_hostName, _sessionId);
+                CloseProviderRequestSessionResponse myCloseProviderRequestSessionResponse = _myProviderRequestService.CloseProviderRequestSession(_hostName, _sessionId, _username, _password);
 
                 //ISBM Adapter Response
                 if (myCloseProviderRequestSessionResponse.StatusCode == 204)

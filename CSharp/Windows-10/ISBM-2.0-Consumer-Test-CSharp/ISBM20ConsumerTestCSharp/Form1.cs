@@ -36,7 +36,7 @@ namespace ISBM20ConsumerTestCSharp
         {
             //Calling ISBM Adaper method
             ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text);
+            OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenSubscriptionSessionResponse.StatusCode.ToString();
@@ -50,7 +50,7 @@ namespace ISBM20ConsumerTestCSharp
         {
             //Calling ISBM Adaper method
             ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationService.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text);
+            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationService.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseSubscriptionSessionResponse.StatusCode.ToString();
@@ -62,7 +62,7 @@ namespace ISBM20ConsumerTestCSharp
         {
             //Calling ISBM Adaper method
             ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationService.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
+            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationService.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myReadPublicationResponse.StatusCode.ToString();
@@ -80,7 +80,7 @@ namespace ISBM20ConsumerTestCSharp
         {
             //Calling ISBM Adaper method
             ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationService.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
+            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationService.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myRemovePublicationResponse.StatusCode.ToString();
