@@ -1,8 +1,0 @@
-{
-  "hostName": "https://isbm.eflood.oiiecosystem.net/rest",
-  "channelId": "/services/general/secured/request",
-  "topic": "OIIE:S32:V1.1/CCOM-JSON:GetMeasurements:V1.0",
-  "authentication": 1,
-  "userName": "Tester",
-  "password": "Password"
-}
