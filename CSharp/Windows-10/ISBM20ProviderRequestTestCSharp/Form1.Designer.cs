@@ -1,4 +1,4 @@
-﻿namespace ISBM20ProviderPublicationTestCSharp
+﻿namespace ISBM20ProviderRequestTestCSharp
 { 
     partial class Form1
     {
@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonPushlish = new System.Windows.Forms.Button();
+            this.buttonResponse = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.buttonCloseSession = new System.Windows.Forms.Button();
             this.buttonOpenSession = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxBOD = new System.Windows.Forms.TextBox();
+            this.textBoxBODResponse = new System.Windows.Forms.TextBox();
             this.textBoxResponse = new System.Windows.Forms.TextBox();
             this.labelResponse = new System.Windows.Forms.Label();
             this.textBoxReasonPhrase = new System.Windows.Forms.TextBox();
             this.textBoxStatusCode = new System.Windows.Forms.TextBox();
-            this.textBoxMessageID = new System.Windows.Forms.TextBox();
+            this.textBoxMessageId = new System.Windows.Forms.TextBox();
             this.textBoxSessionId = new System.Windows.Forms.TextBox();
             this.textBoxTopic = new System.Windows.Forms.TextBox();
             this.textBoxChannelId = new System.Windows.Forms.TextBox();
@@ -52,6 +52,12 @@
             this.labelTpoic = new System.Windows.Forms.Label();
             this.labelChannelID = new System.Windows.Forms.Label();
             this.labelHostName = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonRead = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBoxBODRequest = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonRemove = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.textBoxUserName = new System.Windows.Forms.TextBox();
@@ -60,15 +66,15 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // buttonPushlish
+            // buttonResponse
             // 
-            this.buttonPushlish.Location = new System.Drawing.Point(473, 522);
-            this.buttonPushlish.Name = "buttonPushlish";
-            this.buttonPushlish.Size = new System.Drawing.Size(104, 41);
-            this.buttonPushlish.TabIndex = 111;
-            this.buttonPushlish.Text = "Publish BOD";
-            this.buttonPushlish.UseVisualStyleBackColor = true;
-            this.buttonPushlish.Click += new System.EventHandler(this.buttonPushlish_Click);
+            this.buttonResponse.Location = new System.Drawing.Point(364, 522);
+            this.buttonResponse.Name = "buttonResponse";
+            this.buttonResponse.Size = new System.Drawing.Size(104, 41);
+            this.buttonResponse.TabIndex = 111;
+            this.buttonResponse.Text = "Post Response";
+            this.buttonResponse.UseVisualStyleBackColor = true;
+            this.buttonResponse.Click += new System.EventHandler(this.buttonResponse_Click);
             // 
             // label5
             // 
@@ -77,7 +83,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 110;
-            this.label5.Text = "Step 3";
+            this.label5.Text = "Step 5";
             // 
             // label4
             // 
@@ -86,12 +92,12 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 109;
-            this.label4.Text = "Step 2";
+            this.label4.Text = "Step 4";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(362, 496);
+            this.label3.Location = new System.Drawing.Point(143, 496);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 108;
@@ -109,7 +115,7 @@
             // 
             // buttonOpenSession
             // 
-            this.buttonOpenSession.Location = new System.Drawing.Point(365, 522);
+            this.buttonOpenSession.Location = new System.Drawing.Point(146, 522);
             this.buttonOpenSession.Name = "buttonOpenSession";
             this.buttonOpenSession.Size = new System.Drawing.Size(103, 41);
             this.buttonOpenSession.TabIndex = 106;
@@ -122,22 +128,22 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(707, 31);
+            this.label2.Location = new System.Drawing.Point(714, 297);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 20);
+            this.label2.Size = new System.Drawing.Size(121, 20);
             this.label2.TabIndex = 105;
-            this.label2.Text = "BOD";
+            this.label2.Text = "BOD Response";
             // 
-            // textBoxBOD
+            // textBoxBODResponse
             // 
-            this.textBoxBOD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxBOD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBOD.Location = new System.Drawing.Point(711, 63);
-            this.textBoxBOD.Multiline = true;
-            this.textBoxBOD.Name = "textBoxBOD";
-            this.textBoxBOD.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxBOD.Size = new System.Drawing.Size(524, 500);
-            this.textBoxBOD.TabIndex = 104;
+            this.textBoxBODResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxBODResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBODResponse.Location = new System.Drawing.Point(718, 329);
+            this.textBoxBODResponse.Multiline = true;
+            this.textBoxBODResponse.Name = "textBoxBODResponse";
+            this.textBoxBODResponse.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxBODResponse.Size = new System.Drawing.Size(524, 234);
+            this.textBoxBODResponse.TabIndex = 104;
             // 
             // textBoxResponse
             // 
@@ -178,14 +184,14 @@
             this.textBoxStatusCode.Size = new System.Drawing.Size(69, 26);
             this.textBoxStatusCode.TabIndex = 100;
             // 
-            // textBoxMessageID
+            // textBoxMessageId
             // 
-            this.textBoxMessageID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxMessageID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMessageID.Location = new System.Drawing.Point(148, 176);
-            this.textBoxMessageID.Name = "textBoxMessageID";
-            this.textBoxMessageID.Size = new System.Drawing.Size(548, 26);
-            this.textBoxMessageID.TabIndex = 99;
+            this.textBoxMessageId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxMessageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMessageId.Location = new System.Drawing.Point(148, 176);
+            this.textBoxMessageId.Name = "textBoxMessageId";
+            this.textBoxMessageId.Size = new System.Drawing.Size(548, 26);
+            this.textBoxMessageId.TabIndex = 99;
             // 
             // textBoxSessionId
             // 
@@ -204,7 +210,7 @@
             this.textBoxTopic.Name = "textBoxTopic";
             this.textBoxTopic.Size = new System.Drawing.Size(548, 26);
             this.textBoxTopic.TabIndex = 97;
-            this.textBoxTopic.Text = "OIIE:S30:V1.1/CCOM-JSON:SyncMeasurements:V1.0";
+            this.textBoxTopic.Text = "OIIE:S32:V1.1/CCOM-JSON:GetMeasurements:V1.0";
             // 
             // textBoxChannelId
             // 
@@ -303,6 +309,66 @@
             this.labelHostName.TabIndex = 88;
             this.labelHostName.Text = "Host Name";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(252, 496);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 113;
+            this.label1.Text = "Step 2";
+            // 
+            // buttonRead
+            // 
+            this.buttonRead.Location = new System.Drawing.Point(255, 522);
+            this.buttonRead.Name = "buttonRead";
+            this.buttonRead.Size = new System.Drawing.Size(103, 41);
+            this.buttonRead.TabIndex = 112;
+            this.buttonRead.Text = "Read Request";
+            this.buttonRead.UseVisualStyleBackColor = true;
+            this.buttonRead.Click += new System.EventHandler(this.buttonRead_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(714, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(109, 20);
+            this.label6.TabIndex = 115;
+            this.label6.Text = "BOD Request";
+            // 
+            // textBoxBODRequest
+            // 
+            this.textBoxBODRequest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxBODRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBODRequest.Location = new System.Drawing.Point(718, 63);
+            this.textBoxBODRequest.Multiline = true;
+            this.textBoxBODRequest.Name = "textBoxBODRequest";
+            this.textBoxBODRequest.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.textBoxBODRequest.Size = new System.Drawing.Size(524, 212);
+            this.textBoxBODRequest.TabIndex = 114;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(361, 496);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 117;
+            this.label7.Text = "Step 3";
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Location = new System.Drawing.Point(474, 522);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(103, 41);
+            this.buttonRemove.TabIndex = 116;
+            this.buttonRemove.Text = "Remove Request";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.textBoxPassword);
@@ -362,22 +428,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1254, 591);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.buttonPushlish);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBoxBODRequest);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonRead);
+            this.Controls.Add(this.buttonResponse);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.buttonCloseSession);
             this.Controls.Add(this.buttonOpenSession);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxBOD);
+            this.Controls.Add(this.textBoxBODResponse);
             this.Controls.Add(this.textBoxResponse);
             this.Controls.Add(this.labelResponse);
             this.Controls.Add(this.textBoxReasonPhrase);
             this.Controls.Add(this.textBoxStatusCode);
-            this.Controls.Add(this.textBoxMessageID);
+            this.Controls.Add(this.textBoxMessageId);
             this.Controls.Add(this.textBoxSessionId);
             this.Controls.Add(this.textBoxTopic);
             this.Controls.Add(this.textBoxChannelId);
@@ -390,7 +462,7 @@
             this.Controls.Add(this.labelChannelID);
             this.Controls.Add(this.labelHostName);
             this.Name = "Form1";
-            this.Text = "Proivder Publication Test";
+            this.Text = "Provider Request Test CSharp";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -401,19 +473,19 @@
 
         #endregion
 
-        private System.Windows.Forms.Button buttonPushlish;
+        private System.Windows.Forms.Button buttonResponse;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button buttonCloseSession;
         private System.Windows.Forms.Button buttonOpenSession;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxBOD;
+        private System.Windows.Forms.TextBox textBoxBODResponse;
         private System.Windows.Forms.TextBox textBoxResponse;
         private System.Windows.Forms.Label labelResponse;
         private System.Windows.Forms.TextBox textBoxReasonPhrase;
         private System.Windows.Forms.TextBox textBoxStatusCode;
-        private System.Windows.Forms.TextBox textBoxMessageID;
+        private System.Windows.Forms.TextBox textBoxMessageId;
         private System.Windows.Forms.TextBox textBoxSessionId;
         private System.Windows.Forms.TextBox textBoxTopic;
         private System.Windows.Forms.TextBox textBoxChannelId;
@@ -425,6 +497,12 @@
         private System.Windows.Forms.Label labelTpoic;
         private System.Windows.Forms.Label labelChannelID;
         private System.Windows.Forms.Label labelHostName;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button buttonRead;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxBODRequest;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button buttonRemove;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox textBoxPassword;
         private System.Windows.Forms.TextBox textBoxUserName;
