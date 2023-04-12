@@ -4,7 +4,7 @@ A Software Development Toolkit to assist anyone interested in trying out the Ope
 
 ### Objectives
 
-Since OIIE involves multiple industry standards at different levels of the technology stack, it is helpful to have a basic implementation to experience the OIIE in action. This SDK includes sample C# code projects and two favors of ISBM 2.0 Client Adapters, .Net Core 3.1 and .Net Standard 2.0. They support a wide range of .Net Implementations and OS or Hardware platforms, see details in ISBM 2.0 Client Adapter Architecture Diagram. By using the adaptor, you can deliver and receive CCOM messages through OIIE with just in few lines of code! It cut down on the learning curve and you can try out your ideas in using OIIE without diving into the technical details of the standards.
+Since OIIE involves multiple industry standards at different levels of the technology stack, it is helpful to have a basic implementation to experience the OIIE in action. This SDK includes sample C# code projects and two favors of ISBM 2.0 Client Adapters, .Net Core 3.1 and .Net Standard 2.0. They support a wide range of .Net Implementations and OS or Hardware platforms, see details in ISBM 2.0 Client Adapter Architecture Diagram. By using the adaptor, you can deliver and receive CCOM messages (Common Conceptual Object Model) through ISBM services (ISA-95 Message Service Model) with just in few lines of code! It cut down on the learning curve and you can try out your ideas in using OIIE without diving into the technical details of the standards.
 
 ### Architecture Diagram
 
