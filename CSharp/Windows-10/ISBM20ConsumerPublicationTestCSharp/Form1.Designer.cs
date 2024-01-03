@@ -1,4 +1,4 @@
-﻿namespace ISBM20ConsumerPublicationTestCSharp
+﻿namespace ISBM21ConsumerPublicationTestCSharp
 {
     partial class Form1
     {

@@ -21,14 +21,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter.EndpointOptions;
 
 
-namespace ISBM20ProviderPublicationTestCSharp
+namespace ISBM21ProviderPublicationTestCSharp
 {
     public partial class Form1 : Form
     {
+        private ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
+        
         public Form1()
         {
             InitializeComponent();
@@ -43,9 +46,12 @@ namespace ISBM20ProviderPublicationTestCSharp
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            OpenPublicationSessionResponse myOpenPublicationSessionResponse = myProviderPublicationService.OpenPublicationSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            myProviderPublicationService.Credential.Username = textBoxUserName.Text;
+            myProviderPublicationService.Credential.Password = textBoxPassword.Text;
             
+            OpenPublicationSessionResponse myOpenPublicationSessionResponse = myProviderPublicationService.OpenPublicationSession(textBoxHostName.Text, textBoxChannelId.Text);
+
+
             //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenPublicationSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myOpenPublicationSessionResponse.ReasonPhrase;
@@ -57,29 +63,35 @@ namespace ISBM20ProviderPublicationTestCSharp
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            ClosePublicationSessionResponse myClosePublicationSessionResponse = myProviderPublicationService.ClosePublicationSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            ClosePublicationSessionResponse myClosePublicationSessionResponse = myProviderPublicationService.ClosePublicationSession(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myClosePublicationSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myClosePublicationSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myClosePublicationSessionResponse.ISBMHTTPResponse;
-
         }
 
-            private void buttonPushlish_Click(object sender, EventArgs e)
+        private void buttonPushlish_Click(object sender, EventArgs e)
         {
-            //Calling ISBM Adapter method
-            ProviderPublicationService myProviderPublicationService = new ProviderPublicationService();
-            PostPublicationResponse myPostPublicationResponse = myProviderPublicationService.PostPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBOD.Text, textBoxUserName.Text, textBoxPassword.Text);
+            //Calling ISBM Adapter method 
+            PostPublicationResponse myPostPublicationResponse = myProviderPublicationService.PostPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBOD.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myPostPublicationResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myPostPublicationResponse.ReasonPhrase;
             textBoxResponse.Text = myPostPublicationResponse.ISBMHTTPResponse;
             
-            textBoxMessageID.Text = myPostPublicationResponse.MessageID;
+            textBoxMessageId.Text = myPostPublicationResponse.MessageID;
+        }
 
+        private void buttonExpire_Click(object sender, EventArgs e)
+        {
+            ExpirePublicationResponse myExpirePublicationResponse = myProviderPublicationService.ExpirePublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxMessageId.Text);
+
+            //ISBM Adapter Response
+            textBoxStatusCode.Text = myExpirePublicationResponse.StatusCode.ToString();
+            textBoxReasonPhrase.Text = myExpirePublicationResponse.ReasonPhrase;
+            textBoxResponse.Text = myExpirePublicationResponse.ISBMHTTPResponse;
         }
     }
 }

@@ -21,14 +21,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter.EndpointOptions;
 
 
 namespace ISBM20ProviderRequestTestCSharp
 {
     public partial class Form1 : Form
     {
+        ProviderRequestService myProviderRequestService = new ProviderRequestService(); 
+
         public Form1()
         {
             InitializeComponent();
@@ -43,8 +46,10 @@ namespace ISBM20ProviderRequestTestCSharp
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ProviderRequestService myProviderRequestService = new ProviderRequestService();
-            OpenProviderRequestSessionResponse mProviderRequestServiceResponse = myProviderRequestService.OpenProviderRequestSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text, textBoxUserName.Text, textBoxPassword.Text);
+            myProviderRequestService.Credentials.Username = textBoxUserName.Text;
+            myProviderRequestService.Credentials.Password = textBoxPassword.Text;
+              
+            OpenProviderRequestSessionResponse mProviderRequestServiceResponse = myProviderRequestService.OpenProviderRequestSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text);
             
             //ISBM Adapter Response
             textBoxStatusCode.Text = mProviderRequestServiceResponse.StatusCode.ToString();
@@ -57,21 +62,18 @@ namespace ISBM20ProviderRequestTestCSharp
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ProviderRequestService myProviderRequestService = new ProviderRequestService();
-            CloseProviderRequestSessionResponse myCloseProviderRequestSessionResponse = myProviderRequestService.CloseProviderRequestSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            CloseProviderRequestSessionResponse myCloseProviderRequestSessionResponse = myProviderRequestService.CloseProviderRequestSession(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseProviderRequestSessionResponse.StatusCode.ToString();
             textBoxReasonPhrase.Text = myCloseProviderRequestSessionResponse.ReasonPhrase;
             textBoxResponse.Text = myCloseProviderRequestSessionResponse.ISBMHTTPResponse;
-
         }
 
         private void buttonRead_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ProviderRequestService myProviderRequestService = new ProviderRequestService();
-            ReadRequestResponse myReadRequestResponse = myProviderRequestService.ReadRequest(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            ReadRequestResponse myReadRequestResponse = myProviderRequestService.ReadRequest(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myReadRequestResponse.StatusCode.ToString();
@@ -81,6 +83,7 @@ namespace ISBM20ProviderRequestTestCSharp
             if (myReadRequestResponse.StatusCode == 200)
             {
                 textBoxMessageId.Text = myReadRequestResponse.MessageID;
+                textBoxRequestMessageId.Text = myReadRequestResponse.MessageID;
                 textBoxBODRequest.Text = myReadRequestResponse.MessageContent;
             }
         }
@@ -88,8 +91,7 @@ namespace ISBM20ProviderRequestTestCSharp
         private void buttonResponse_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ProviderRequestService myProviderRequestService = new ProviderRequestService();
-            PostResponseResponse myPostResponseResponse = myProviderRequestService.PostResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxMessageId.Text, textBoxBODResponse.Text, textBoxUserName.Text, textBoxPassword.Text);
+            PostResponseResponse myPostResponseResponse = myProviderRequestService.PostResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxRequestMessageId.Text, textBoxBODResponse.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myPostResponseResponse.StatusCode.ToString();
@@ -102,8 +104,7 @@ namespace ISBM20ProviderRequestTestCSharp
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ProviderRequestService myProviderRequestService = new ProviderRequestService();
-            RemoveRequestResponse myRemoveRequestResponse = myProviderRequestService.RemoveRequest(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            RemoveRequestResponse myRemoveRequestResponse = myProviderRequestService.RemoveRequest(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myRemoveRequestResponse.StatusCode.ToString();

@@ -1,4 +1,4 @@
-﻿namespace ISBM20ProviderPublicationTestCSharp
+﻿namespace ISBM21ProviderPublicationTestCSharp
 { 
     partial class Form1
     {
@@ -40,7 +40,7 @@
             this.labelResponse = new System.Windows.Forms.Label();
             this.textBoxReasonPhrase = new System.Windows.Forms.TextBox();
             this.textBoxStatusCode = new System.Windows.Forms.TextBox();
-            this.textBoxMessageID = new System.Windows.Forms.TextBox();
+            this.textBoxMessageId = new System.Windows.Forms.TextBox();
             this.textBoxSessionId = new System.Windows.Forms.TextBox();
             this.textBoxTopic = new System.Windows.Forms.TextBox();
             this.textBoxChannelId = new System.Windows.Forms.TextBox();
@@ -57,12 +57,14 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.buttonExpire = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonPushlish
             // 
-            this.buttonPushlish.Location = new System.Drawing.Point(473, 522);
+            this.buttonPushlish.Location = new System.Drawing.Point(374, 522);
             this.buttonPushlish.Name = "buttonPushlish";
             this.buttonPushlish.Size = new System.Drawing.Size(104, 41);
             this.buttonPushlish.TabIndex = 111;
@@ -73,7 +75,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(580, 496);
+            this.label5.Location = new System.Drawing.Point(481, 496);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 110;
@@ -82,7 +84,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(471, 496);
+            this.label4.Location = new System.Drawing.Point(372, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 109;
@@ -91,7 +93,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(362, 496);
+            this.label3.Location = new System.Drawing.Point(263, 496);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 108;
@@ -99,7 +101,7 @@
             // 
             // buttonCloseSession
             // 
-            this.buttonCloseSession.Location = new System.Drawing.Point(583, 522);
+            this.buttonCloseSession.Location = new System.Drawing.Point(593, 522);
             this.buttonCloseSession.Name = "buttonCloseSession";
             this.buttonCloseSession.Size = new System.Drawing.Size(103, 41);
             this.buttonCloseSession.TabIndex = 107;
@@ -109,7 +111,7 @@
             // 
             // buttonOpenSession
             // 
-            this.buttonOpenSession.Location = new System.Drawing.Point(365, 522);
+            this.buttonOpenSession.Location = new System.Drawing.Point(266, 522);
             this.buttonOpenSession.Name = "buttonOpenSession";
             this.buttonOpenSession.Size = new System.Drawing.Size(103, 41);
             this.buttonOpenSession.TabIndex = 106;
@@ -178,14 +180,14 @@
             this.textBoxStatusCode.Size = new System.Drawing.Size(69, 26);
             this.textBoxStatusCode.TabIndex = 100;
             // 
-            // textBoxMessageID
+            // textBoxMessageId
             // 
-            this.textBoxMessageID.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxMessageID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMessageID.Location = new System.Drawing.Point(148, 176);
-            this.textBoxMessageID.Name = "textBoxMessageID";
-            this.textBoxMessageID.Size = new System.Drawing.Size(548, 26);
-            this.textBoxMessageID.TabIndex = 99;
+            this.textBoxMessageId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxMessageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxMessageId.Location = new System.Drawing.Point(148, 176);
+            this.textBoxMessageId.Name = "textBoxMessageId";
+            this.textBoxMessageId.Size = new System.Drawing.Size(548, 26);
+            this.textBoxMessageId.TabIndex = 99;
             // 
             // textBoxSessionId
             // 
@@ -358,12 +360,33 @@
             this.label9.TabIndex = 105;
             this.label9.Text = "Password";
             // 
+            // buttonExpire
+            // 
+            this.buttonExpire.Location = new System.Drawing.Point(484, 522);
+            this.buttonExpire.Name = "buttonExpire";
+            this.buttonExpire.Size = new System.Drawing.Size(103, 41);
+            this.buttonExpire.TabIndex = 124;
+            this.buttonExpire.Text = "Expire BOD";
+            this.buttonExpire.UseVisualStyleBackColor = true;
+            this.buttonExpire.Click += new System.EventHandler(this.buttonExpire_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(590, 496);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(38, 13);
+            this.label1.TabIndex = 125;
+            this.label1.Text = "Step 4";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1254, 591);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.buttonExpire);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.buttonPushlish);
             this.Controls.Add(this.label5);
@@ -377,7 +400,7 @@
             this.Controls.Add(this.labelResponse);
             this.Controls.Add(this.textBoxReasonPhrase);
             this.Controls.Add(this.textBoxStatusCode);
-            this.Controls.Add(this.textBoxMessageID);
+            this.Controls.Add(this.textBoxMessageId);
             this.Controls.Add(this.textBoxSessionId);
             this.Controls.Add(this.textBoxTopic);
             this.Controls.Add(this.textBoxChannelId);
@@ -413,7 +436,7 @@
         private System.Windows.Forms.Label labelResponse;
         private System.Windows.Forms.TextBox textBoxReasonPhrase;
         private System.Windows.Forms.TextBox textBoxStatusCode;
-        private System.Windows.Forms.TextBox textBoxMessageID;
+        private System.Windows.Forms.TextBox textBoxMessageId;
         private System.Windows.Forms.TextBox textBoxSessionId;
         private System.Windows.Forms.TextBox textBoxTopic;
         private System.Windows.Forms.TextBox textBoxChannelId;
@@ -430,6 +453,8 @@
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonExpire;
+        private System.Windows.Forms.Label label1;
     }
 }
 

@@ -8,16 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Packages\" />
+    <Compile Remove="Packages\**" />
+    <EmbeddedResource Remove="Packages\**" />
+    <None Remove="Packages\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="ISBM20ClientAdapterCore31">
-      <HintPath>Packages\ISBM20ClientAdapter\netcoreapp3.1\ISBM20ClientAdapterCore31.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Packages\Newtonsoft\Newtonsoft.Json.dll</HintPath>
-    </Reference>
+    <PackageReference Include="RapidRedPanda.ISBM.ClientAdapter" Version="2.0.0.1" />
   </ItemGroup>
 
   <ItemGroup>

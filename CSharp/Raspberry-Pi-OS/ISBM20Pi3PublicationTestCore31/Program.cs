@@ -16,8 +16,8 @@
 
 using System;
 using System.Threading;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
@@ -44,8 +44,11 @@ namespace ISBM20Pi3TestCore21
             SetConfigurations();
             GetBODTemplate();
 
+            _myProviderPublicationService.Credential.Username = _username;
+            _myProviderPublicationService.Credential.Password = _password;
+
             //Open an Provider Publication Session
-            OpenPublicationSessionResponse myOpenPublicationSessionResponse = _myProviderPublicationService.OpenPublicationSession(_hostName, _channelId, _username, _password);
+            OpenPublicationSessionResponse myOpenPublicationSessionResponse = _myProviderPublicationService.OpenPublicationSession(_hostName, _channelId);
             Console.WriteLine("Host Address " + _hostName);
             Console.WriteLine("Channel Id " + _channelId);
 
@@ -110,7 +113,7 @@ namespace ISBM20Pi3TestCore21
             string bodMessage = FillBODFields(_bodTemplate);
 
             //Post Publication - BOD message
-            PostPublicationResponse myPostPublicationResponse = _myProviderPublicationService.PostPublication(_hostName, _sessionId, _topic, bodMessage, _username, _password);
+            PostPublicationResponse myPostPublicationResponse = _myProviderPublicationService.PostPublication(_hostName, _sessionId, _topic, bodMessage);
 
             string MessageId = "";
             if (myPostPublicationResponse.StatusCode == 201)

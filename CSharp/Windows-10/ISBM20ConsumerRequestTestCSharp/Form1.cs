@@ -21,13 +21,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter.EndpointOptions;
 
 namespace ISBM20ConsumerRequestTestCSharp
 {
     public partial class Form1 : Form
     {
+        ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
+
         public Form1()
         {
             InitializeComponent();
@@ -42,8 +45,10 @@ namespace ISBM20ConsumerRequestTestCSharp
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
-            OpenConsumerRequestSessionResponse myOpenSubscriptionSessionResponse = myConsumerRequestService.OpenConsumerRequestSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            myConsumerRequestService.Credentials.Username = textBoxUserName.Text;
+            myConsumerRequestService.Credentials.Password = textBoxPassword.Text;
+            
+            OpenConsumerRequestSessionResponse myOpenSubscriptionSessionResponse = myConsumerRequestService.OpenConsumerRequestSession(textBoxHostName.Text, textBoxChannelId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenSubscriptionSessionResponse.StatusCode.ToString();
@@ -56,8 +61,7 @@ namespace ISBM20ConsumerRequestTestCSharp
         private void buttonPostRequest_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adapter method
-            ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
-            PostRequestResponse myPostRequestResponse = myConsumerRequestService.PostRequest(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBODRequest.Text, textBoxUserName.Text, textBoxPassword.Text);
+            PostRequestResponse myPostRequestResponse = myConsumerRequestService.PostRequest(textBoxHostName.Text, textBoxSessionId.Text, textBoxTopic.Text, textBoxBODRequest.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myPostRequestResponse.StatusCode.ToString();
@@ -65,13 +69,14 @@ namespace ISBM20ConsumerRequestTestCSharp
             textBoxResponse.Text = myPostRequestResponse.ISBMHTTPResponse;
 
             textBoxMessageId.Text = myPostRequestResponse.MessageID;
+            textBoxRequestMessageId.Text = myPostRequestResponse.MessageID;
+
         }
 
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
-            CloseConsumerRequestSessionResponse myCloseConsumerRequestSessionResponse = myConsumerRequestService.CloseConsumerRequestSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            CloseConsumerRequestSessionResponse myCloseConsumerRequestSessionResponse = myConsumerRequestService.CloseConsumerRequestSession(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseConsumerRequestSessionResponse.StatusCode.ToString();
@@ -82,8 +87,7 @@ namespace ISBM20ConsumerRequestTestCSharp
         private void buttonRead_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
-            ReadResponseResponse myReadResponseResponse = myConsumerRequestService.ReadResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxMessageId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            ReadResponseResponse myReadResponseResponse = myConsumerRequestService.ReadResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxRequestMessageId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myReadResponseResponse.StatusCode.ToString();
@@ -99,8 +103,7 @@ namespace ISBM20ConsumerRequestTestCSharp
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerRequestService myConsumerRequestService = new ConsumerRequestService();
-            RemoveResponseResponse myRemoveResponseResponse = myConsumerRequestService.RemoveResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxMessageId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            RemoveResponseResponse myRemoveResponseResponse = myConsumerRequestService.RemoveResponse(textBoxHostName.Text, textBoxSessionId.Text, textBoxRequestMessageId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myRemoveResponseResponse.StatusCode.ToString();
@@ -110,6 +113,16 @@ namespace ISBM20ConsumerRequestTestCSharp
             textBoxBODResponse.Text = "";
             textBoxMessageId.Text = "";
         }
-               
+
+        private void buttonExpireRequest_Click(object sender, EventArgs e)
+        {
+            //Calling ISBM Adaper method
+            ExpireRequestResponse myExpireRequestResponse = myConsumerRequestService.ExpireRequest(textBoxHostName.Text, textBoxSessionId.Text, textBoxRequestMessageId.Text);
+
+            //ISBM Adapter Response
+            textBoxStatusCode.Text = myExpireRequestResponse.StatusCode.ToString();
+            textBoxReasonPhrase.Text = myExpireRequestResponse.ReasonPhrase;
+            textBoxResponse.Text = myExpireRequestResponse.ISBMHTTPResponse;
+        }
     }
 }

@@ -32,8 +32,8 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
 
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409

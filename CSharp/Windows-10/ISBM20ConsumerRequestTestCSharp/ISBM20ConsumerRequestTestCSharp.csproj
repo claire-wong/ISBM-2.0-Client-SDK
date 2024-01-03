@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ISBM20ClientAdapterStandard20">
-      <HintPath>Packages\ISBM20ClientAdapterStandard\netstandard2.0\ISBM20ClientAdapterStandard20.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RapidRedPanda.ISBM.ClientAdapter, Version=2.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\RapidRedPanda.ISBM.ClientAdapter.2.0.0.1\lib\netstandard2.0\RapidRedPanda.ISBM.ClientAdapter.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -73,6 +76,7 @@
     <None Include="BODs\GetMeasurements.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

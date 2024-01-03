@@ -63,6 +63,8 @@
             this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBoxRequestMessageId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -149,7 +151,7 @@
             // 
             this.textBoxResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxResponse.Location = new System.Drawing.Point(148, 329);
+            this.textBoxResponse.Location = new System.Drawing.Point(148, 374);
             this.textBoxResponse.Name = "textBoxResponse";
             this.textBoxResponse.Size = new System.Drawing.Size(548, 26);
             this.textBoxResponse.TabIndex = 103;
@@ -159,7 +161,7 @@
             this.labelResponse.AutoSize = true;
             this.labelResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelResponse.ForeColor = System.Drawing.Color.Black;
-            this.labelResponse.Location = new System.Drawing.Point(19, 332);
+            this.labelResponse.Location = new System.Drawing.Point(17, 377);
             this.labelResponse.Name = "labelResponse";
             this.labelResponse.Size = new System.Drawing.Size(82, 20);
             this.labelResponse.TabIndex = 102;
@@ -169,7 +171,7 @@
             // 
             this.textBoxReasonPhrase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxReasonPhrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxReasonPhrase.Location = new System.Drawing.Point(148, 251);
+            this.textBoxReasonPhrase.Location = new System.Drawing.Point(148, 296);
             this.textBoxReasonPhrase.Multiline = true;
             this.textBoxReasonPhrase.Name = "textBoxReasonPhrase";
             this.textBoxReasonPhrase.Size = new System.Drawing.Size(548, 66);
@@ -179,7 +181,7 @@
             // 
             this.textBoxStatusCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxStatusCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStatusCode.Location = new System.Drawing.Point(148, 213);
+            this.textBoxStatusCode.Location = new System.Drawing.Point(148, 258);
             this.textBoxStatusCode.Name = "textBoxStatusCode";
             this.textBoxStatusCode.Size = new System.Drawing.Size(69, 26);
             this.textBoxStatusCode.TabIndex = 100;
@@ -237,7 +239,7 @@
             this.labelReasonPhrase.AutoSize = true;
             this.labelReasonPhrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReasonPhrase.ForeColor = System.Drawing.Color.Black;
-            this.labelReasonPhrase.Location = new System.Drawing.Point(19, 251);
+            this.labelReasonPhrase.Location = new System.Drawing.Point(17, 296);
             this.labelReasonPhrase.Name = "labelReasonPhrase";
             this.labelReasonPhrase.Size = new System.Drawing.Size(115, 20);
             this.labelReasonPhrase.TabIndex = 94;
@@ -248,7 +250,7 @@
             this.labelStatusCode.AutoSize = true;
             this.labelStatusCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCode.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusCode.Location = new System.Drawing.Point(19, 216);
+            this.labelStatusCode.Location = new System.Drawing.Point(17, 261);
             this.labelStatusCode.Name = "labelStatusCode";
             this.labelStatusCode.Size = new System.Drawing.Size(98, 20);
             this.labelStatusCode.TabIndex = 93;
@@ -424,12 +426,34 @@
             this.label9.TabIndex = 105;
             this.label9.Text = "Password";
             // 
+            // textBoxRequestMessageId
+            // 
+            this.textBoxRequestMessageId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxRequestMessageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRequestMessageId.Location = new System.Drawing.Point(148, 217);
+            this.textBoxRequestMessageId.Name = "textBoxRequestMessageId";
+            this.textBoxRequestMessageId.Size = new System.Drawing.Size(548, 26);
+            this.textBoxRequestMessageId.TabIndex = 128;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(17, 220);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 20);
+            this.label12.TabIndex = 127;
+            this.label12.Text = "Request ID";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(1254, 591);
+            this.Controls.Add(this.textBoxRequestMessageId);
+            this.Controls.Add(this.label12);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.buttonRemove);
@@ -508,6 +532,8 @@
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxRequestMessageId;
+        private System.Windows.Forms.Label label12;
     }
 }
 

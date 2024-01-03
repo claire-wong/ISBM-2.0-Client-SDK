@@ -59,18 +59,22 @@
             this.label8 = new System.Windows.Forms.Label();
             this.textBoxBODResponse = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBoxUserName = new System.Windows.Forms.TextBox();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
+            this.textBoxUserName = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.buttonExpireRequest = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxRequestMessageId = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(458, 522);
+            this.buttonRemove.Location = new System.Drawing.Point(480, 522);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(116, 41);
+            this.buttonRemove.Size = new System.Drawing.Size(106, 41);
             this.buttonRemove.TabIndex = 115;
             this.buttonRemove.Text = "Remove Response";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -79,7 +83,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(335, 496);
+            this.label6.Location = new System.Drawing.Point(253, 496);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(38, 13);
             this.label6.TabIndex = 114;
@@ -87,9 +91,9 @@
             // 
             // buttonRead
             // 
-            this.buttonRead.Location = new System.Drawing.Point(338, 522);
+            this.buttonRead.Location = new System.Drawing.Point(373, 522);
             this.buttonRead.Name = "buttonRead";
-            this.buttonRead.Size = new System.Drawing.Size(114, 41);
+            this.buttonRead.Size = new System.Drawing.Size(101, 41);
             this.buttonRead.TabIndex = 113;
             this.buttonRead.Text = "Read Response";
             this.buttonRead.UseVisualStyleBackColor = true;
@@ -98,7 +102,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(455, 496);
+            this.label5.Location = new System.Drawing.Point(370, 496);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 112;
@@ -107,7 +111,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(577, 496);
+            this.label4.Location = new System.Drawing.Point(477, 496);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 13);
             this.label4.TabIndex = 111;
@@ -116,7 +120,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 496);
+            this.label3.Location = new System.Drawing.Point(20, 496);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 110;
@@ -124,9 +128,9 @@
             // 
             // buttonCloseSession
             // 
-            this.buttonCloseSession.Location = new System.Drawing.Point(580, 522);
+            this.buttonCloseSession.Location = new System.Drawing.Point(592, 522);
             this.buttonCloseSession.Name = "buttonCloseSession";
-            this.buttonCloseSession.Size = new System.Drawing.Size(116, 41);
+            this.buttonCloseSession.Size = new System.Drawing.Size(104, 41);
             this.buttonCloseSession.TabIndex = 109;
             this.buttonCloseSession.Text = "Close Session";
             this.buttonCloseSession.UseVisualStyleBackColor = true;
@@ -134,9 +138,9 @@
             // 
             // buttonOpenSession
             // 
-            this.buttonOpenSession.Location = new System.Drawing.Point(96, 522);
+            this.buttonOpenSession.Location = new System.Drawing.Point(23, 522);
             this.buttonOpenSession.Name = "buttonOpenSession";
-            this.buttonOpenSession.Size = new System.Drawing.Size(116, 41);
+            this.buttonOpenSession.Size = new System.Drawing.Size(111, 41);
             this.buttonOpenSession.TabIndex = 108;
             this.buttonOpenSession.Text = "Open Session";
             this.buttonOpenSession.UseVisualStyleBackColor = true;
@@ -168,7 +172,7 @@
             // 
             this.textBoxResponse.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxResponse.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxResponse.Location = new System.Drawing.Point(148, 333);
+            this.textBoxResponse.Location = new System.Drawing.Point(148, 367);
             this.textBoxResponse.Name = "textBoxResponse";
             this.textBoxResponse.Size = new System.Drawing.Size(548, 26);
             this.textBoxResponse.TabIndex = 105;
@@ -178,7 +182,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(19, 336);
+            this.label1.Location = new System.Drawing.Point(19, 370);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 20);
             this.label1.TabIndex = 104;
@@ -188,7 +192,7 @@
             // 
             this.textBoxReasonPhrase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxReasonPhrase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxReasonPhrase.Location = new System.Drawing.Point(148, 255);
+            this.textBoxReasonPhrase.Location = new System.Drawing.Point(148, 289);
             this.textBoxReasonPhrase.Multiline = true;
             this.textBoxReasonPhrase.Name = "textBoxReasonPhrase";
             this.textBoxReasonPhrase.Size = new System.Drawing.Size(548, 66);
@@ -198,7 +202,7 @@
             // 
             this.textBoxStatusCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.textBoxStatusCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxStatusCode.Location = new System.Drawing.Point(148, 217);
+            this.textBoxStatusCode.Location = new System.Drawing.Point(148, 254);
             this.textBoxStatusCode.Name = "textBoxStatusCode";
             this.textBoxStatusCode.Size = new System.Drawing.Size(69, 26);
             this.textBoxStatusCode.TabIndex = 102;
@@ -256,7 +260,7 @@
             this.labelMessage.AutoSize = true;
             this.labelMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMessage.ForeColor = System.Drawing.Color.Black;
-            this.labelMessage.Location = new System.Drawing.Point(19, 255);
+            this.labelMessage.Location = new System.Drawing.Point(19, 292);
             this.labelMessage.Name = "labelMessage";
             this.labelMessage.Size = new System.Drawing.Size(115, 20);
             this.labelMessage.TabIndex = 96;
@@ -267,7 +271,7 @@
             this.labelStatusCode.AutoSize = true;
             this.labelStatusCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelStatusCode.ForeColor = System.Drawing.Color.Black;
-            this.labelStatusCode.Location = new System.Drawing.Point(19, 220);
+            this.labelStatusCode.Location = new System.Drawing.Point(19, 257);
             this.labelStatusCode.Name = "labelStatusCode";
             this.labelStatusCode.Size = new System.Drawing.Size(98, 20);
             this.labelStatusCode.TabIndex = 95;
@@ -330,9 +334,9 @@
             // 
             // buttonPostRequest
             // 
-            this.buttonPostRequest.Location = new System.Drawing.Point(218, 522);
+            this.buttonPostRequest.Location = new System.Drawing.Point(140, 522);
             this.buttonPostRequest.Name = "buttonPostRequest";
-            this.buttonPostRequest.Size = new System.Drawing.Size(114, 41);
+            this.buttonPostRequest.Size = new System.Drawing.Size(111, 41);
             this.buttonPostRequest.TabIndex = 117;
             this.buttonPostRequest.Text = "Post Request";
             this.buttonPostRequest.UseVisualStyleBackColor = true;
@@ -341,7 +345,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(215, 496);
+            this.label7.Location = new System.Drawing.Point(137, 496);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(38, 13);
             this.label7.TabIndex = 116;
@@ -352,7 +356,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(707, 301);
+            this.label8.Location = new System.Drawing.Point(707, 292);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(121, 20);
             this.label8.TabIndex = 121;
@@ -383,16 +387,24 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Security";
             // 
-            // label9
+            // textBoxPassword
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(77, 54);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 20);
-            this.label9.TabIndex = 105;
-            this.label9.Text = "Password";
+            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPassword.Location = new System.Drawing.Point(172, 51);
+            this.textBoxPassword.Name = "textBoxPassword";
+            this.textBoxPassword.PasswordChar = '*';
+            this.textBoxPassword.Size = new System.Drawing.Size(228, 26);
+            this.textBoxPassword.TabIndex = 108;
+            // 
+            // textBoxUserName
+            // 
+            this.textBoxUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxUserName.Location = new System.Drawing.Point(172, 19);
+            this.textBoxUserName.Name = "textBoxUserName";
+            this.textBoxUserName.Size = new System.Drawing.Size(228, 26);
+            this.textBoxUserName.TabIndex = 107;
             // 
             // label10
             // 
@@ -405,24 +417,55 @@
             this.label10.TabIndex = 106;
             this.label10.Text = "User Name";
             // 
-            // textBoxUserName
+            // label9
             // 
-            this.textBoxUserName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxUserName.Location = new System.Drawing.Point(172, 19);
-            this.textBoxUserName.Name = "textBoxUserName";
-            this.textBoxUserName.Size = new System.Drawing.Size(228, 26);
-            this.textBoxUserName.TabIndex = 107;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(77, 54);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(78, 20);
+            this.label9.TabIndex = 105;
+            this.label9.Text = "Password";
             // 
-            // textBoxPassword
+            // buttonExpireRequest
             // 
-            this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.textBoxPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPassword.Location = new System.Drawing.Point(172, 51);
-            this.textBoxPassword.Name = "textBoxPassword";
-            this.textBoxPassword.PasswordChar = '*';
-            this.textBoxPassword.Size = new System.Drawing.Size(228, 26);
-            this.textBoxPassword.TabIndex = 108;
+            this.buttonExpireRequest.Location = new System.Drawing.Point(256, 522);
+            this.buttonExpireRequest.Name = "buttonExpireRequest";
+            this.buttonExpireRequest.Size = new System.Drawing.Size(111, 41);
+            this.buttonExpireRequest.TabIndex = 123;
+            this.buttonExpireRequest.Text = "Expire Request";
+            this.buttonExpireRequest.UseVisualStyleBackColor = true;
+            this.buttonExpireRequest.Click += new System.EventHandler(this.buttonExpireRequest_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(589, 496);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(38, 13);
+            this.label11.TabIndex = 124;
+            this.label11.Text = "Step 6";
+            // 
+            // textBoxRequestMessageId
+            // 
+            this.textBoxRequestMessageId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.textBoxRequestMessageId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRequestMessageId.Location = new System.Drawing.Point(148, 216);
+            this.textBoxRequestMessageId.Name = "textBoxRequestMessageId";
+            this.textBoxRequestMessageId.Size = new System.Drawing.Size(548, 26);
+            this.textBoxRequestMessageId.TabIndex = 126;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Black;
+            this.label12.Location = new System.Drawing.Point(19, 219);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(91, 20);
+            this.label12.TabIndex = 125;
+            this.label12.Text = "Request ID";
             // 
             // Form1
             // 
@@ -430,6 +473,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Thistle;
             this.ClientSize = new System.Drawing.Size(1254, 591);
+            this.Controls.Add(this.textBoxRequestMessageId);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.buttonExpireRequest);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBoxBODResponse);
@@ -508,6 +555,10 @@
         private System.Windows.Forms.TextBox textBoxUserName;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button buttonExpireRequest;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxRequestMessageId;
+        private System.Windows.Forms.Label label12;
     }
 }
 

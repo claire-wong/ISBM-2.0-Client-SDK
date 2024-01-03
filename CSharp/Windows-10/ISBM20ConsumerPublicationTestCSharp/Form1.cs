@@ -20,13 +20,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using ISBM20ClientAdapter;
-using ISBM20ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter;
+using RapidRedPanda.ISBM.ClientAdapter.ResponseType;
+using RapidRedPanda.ISBM.ClientAdapter.EndpointOptions;
 
-namespace ISBM20ConsumerPublicationTestCSharp
+namespace ISBM21ConsumerPublicationTestCSharp
 {
     public partial class Form1 : Form
     {
+        ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
+
         public Form1()
         {
             InitializeComponent();
@@ -35,8 +38,11 @@ namespace ISBM20ConsumerPublicationTestCSharp
         private void buttonOpenSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text, textBoxUserName.Text, textBoxPassword.Text);
+            
+            myConsumerPublicationService.Credential.Username = textBoxUserName.Text;
+            myConsumerPublicationService.Credential.Password = textBoxPassword.Text;
+ 
+            OpenSubscriptionSessionResponse myOpenSubscriptionSessionResponse = myConsumerPublicationService.OpenSubscriptionSession(textBoxHostName.Text, textBoxChannelId.Text, textBoxTopic.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myOpenSubscriptionSessionResponse.StatusCode.ToString();
@@ -49,8 +55,7 @@ namespace ISBM20ConsumerPublicationTestCSharp
         private void buttonCloseSession_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationService.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            CloseSubscriptionSessionResponse myCloseSubscriptionSessionResponse = myConsumerPublicationService.CloseSubscriptionSession(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myCloseSubscriptionSessionResponse.StatusCode.ToString();
@@ -61,8 +66,7 @@ namespace ISBM20ConsumerPublicationTestCSharp
         private void buttonRead_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationService.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            ReadPublicationResponse myReadPublicationResponse = myConsumerPublicationService.ReadPublication(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myReadPublicationResponse.StatusCode.ToString();
@@ -79,8 +83,7 @@ namespace ISBM20ConsumerPublicationTestCSharp
         private void buttonRemove_Click(object sender, EventArgs e)
         {
             //Calling ISBM Adaper method
-            ConsumerPublicationService myConsumerPublicationService = new ConsumerPublicationService();
-            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationService.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text, textBoxUserName.Text, textBoxPassword.Text);
+            RemovePublicationResponse myRemovePublicationResponse = myConsumerPublicationService.RemovePublication(textBoxHostName.Text, textBoxSessionId.Text);
 
             //ISBM Adapter Response
             textBoxStatusCode.Text = myRemovePublicationResponse.StatusCode.ToString();

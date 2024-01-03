@@ -17,7 +17,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ISBM20ConsumerPublicationTestCSharp
+namespace ISBM21ConsumerPublicationTestCSharp
 {
     internal static class Program
     {
