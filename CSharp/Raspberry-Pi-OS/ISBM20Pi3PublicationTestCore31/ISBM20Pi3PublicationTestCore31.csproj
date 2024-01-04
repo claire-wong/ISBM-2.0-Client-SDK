@@ -8,7 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="RapidRedPanda.ISBM.ClientAdapter" Version="2.0.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="RapidRedPanda.ISBM.ClientAdapter" Version="2.0.1.2" />
   </ItemGroup>
 
   <ItemGroup>
