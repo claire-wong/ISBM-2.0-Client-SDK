@@ -120,8 +120,8 @@ namespace ISBM20Pi3TestCSharp
             _authentication = (Boolean)JObjectConfigs["authentication"];
             if (_authentication == true)
             {
-                _username = JObjectConfigs["userName"].ToString();
-                _password = JObjectConfigs["password"].ToString();
+                _myProviderPublicationService.Credential.Username = JObjectConfigs["userName"].ToString();
+                _myProviderPublicationService.Credential.Password = JObjectConfigs["password"].ToString();
             }
         }
 
