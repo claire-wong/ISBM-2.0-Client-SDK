@@ -23,13 +23,8 @@ The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packa
 
 ### Use Cases
 
-1. Publication-Subscription System
-   [Smart Agriculture Monitoring System](Documents/Use_Cases/Smart-Agriculture-Monitoring-System.md)
-    
-2. Request-Response System
-   [Fleet Management System for Logistics](Documents/Use_Cases/Fleet_Management.md)
-
-3. Mix Message System System
-   [Flood Management System](Documents/Use_Cases/Flood-Management.md)
+#### 1. Example of using Publication-Subscription model:  [Smart Agriculture Monitoring System](Documents/Use_Cases/Smart-Agriculture-Monitoring-System.md) 
+#### 2. Example of using Request-Response model:  [Fleet Management System for Logistics](Documents/Use_Cases/Fleet_Management.md)
+#### 3. Example of using both Publication-Subscription and Request-Response models:  [Flood Management System](Documents/Use_Cases/Flood-Management.md)
  
 
