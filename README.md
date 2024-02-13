@@ -16,12 +16,22 @@ Since OIIE involves multiple industry standards at different levels of the techn
 
 The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packages/RapidRedPanda.ISBM.ClientAdapter/#readme-body-tab) package is designed to handle all the details of ISBM implementations for communication with ISBM servers. The ISBM interface will be accessible through object classes that developers should find user-friendly and easy to use. This will cut down the learning curve of building ISBM-compliant devices or applications.
 
-
       
 ### ISBM Client Adapters Architecture Diagram
 
 ![image](/Documents/Images/Architecture_Diagram1.jpg)
 
-[Fleet Management](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
+### Use Cases
+
+1. Publication-Subscription System
+
+2. Request-Response System
+
+   [Fleet Management System for Logistics](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
+ 
+
+4. Mix Message System 
+
+    A [Fleet Management](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
 
 [Fleet Management](/Documents/Use_Cases/Fleet_Management.md)
