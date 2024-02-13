@@ -1,4 +1,4 @@
 # Fleet Management
 
-A Software Development Toolkit to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE)
+In this scenario, a fleet management system helps logistics companies monitor and manage their vehicle fleets effectively using IoT devices and a message-based communication system with a request-response pattern.
 
