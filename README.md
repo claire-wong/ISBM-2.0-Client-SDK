@@ -9,3 +9,7 @@ Since OIIE involves multiple industry standards at different levels of the techn
 ### Architecture Diagram
 
 ![image](/Documents/Images/Architecture_Diagram1.jpg)
+
+[Fleet Management](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
+
+[Fleet Management](/Documents/Use_Cases/Fleet_Management.md)
