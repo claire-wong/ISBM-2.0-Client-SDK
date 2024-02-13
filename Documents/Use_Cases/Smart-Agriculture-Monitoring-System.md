@@ -26,4 +26,8 @@ In this scenario, a smart agriculture monitoring system leverages IoT devices an
    2. Increased crop yield: By monitoring crop health and providing timely interventions, farmers can detect issues early and take preventive measures to maximize yield and quality
    3. Cost savings: Optimized resource usage and proactive management help reduce input costs such as water, fertilizer, and pesticides.
    4. Data-driven decision-making: Farmers can make informed decisions about planting, irrigation, and crop protection strategies based on insights derived from data collected by IoT devices and sensors.
- 
+
+
+
+
+ Icons by [Icons8](https://icons8.com/)https://icons8.com/)
