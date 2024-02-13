@@ -1,4 +1,6 @@
-# Fleet Management
+# Smart Agriculture Monitoring System
 
-A Software Development Toolkit to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE)
+In this scenario, a smart agriculture monitoring system leverages IoT devices and sensors to optimize crop growth and resource usage on a farm. The message bus facilitates communication between various components of the system.
+
+
 
