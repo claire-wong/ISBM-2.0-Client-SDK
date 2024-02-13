@@ -4,5 +4,18 @@ In this scenario, a smart agriculture monitoring system leverages IoT devices an
 
 ![image](/Documents/Use_Cases/Images/Smart-Agriculture-Monitoring-System.jpg)
 
+### Components
 
-Documents/Use_Cases/Images/Smart-Agriculture-Monitoring-System.jpg
+   1. Soil Moisture Sensors: Measure soil moisture levels in different areas of the field.
+   2. Weather Service: Realitme and forcast data on temperature, humidity, and precipitation.
+   3. Crop Health Sensors: Monitor the health and growth of crops.
+   4. Irrigation System: Controls the release of water based on soil moisture and weather conditions.
+   5. Farming Dashboard: Provides real-time insights and analytics for farmers.
+
+### Message Flows
+
+   1. Soil moisture sensors periodically send messages to the message bus with data on soil moisture levels in different parts of the field.
+   2. The weather station collects weather data and sends updates to the message bus, including temperature, humidity, and precipitation forecasts.
+   3. Crop health sensors monitor the condition of crops and transmit data to the message bus regarding growth rates, pest infestations, or diseases.
+   4. The irrigation system subscribes to messages from the soil moisture sensors and weather station. Based on the received data, it determines when and how much water to release for optimal crop irrigation.
+   5. The farming dashboard aggregates and analyzes data from all sensors and systems, providing farmers with actionable insights and recommendations for crop management and resource allocation.
