@@ -1,6 +1,6 @@
 # ISBM-2.0-Client-SDK
 
-Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperable ecosystem to tackle industry-wide data silo challenges. It enables a cluster of devices and processes to communicate in an interoperable and scalable manner. This Software Development Toolkit is designed to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE) with easy to follow examples. 
+Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperable ecosystem to tackle industry-wide data silo challenges. It enables a cluster of IoT/IoE devices and processes to communicate in an interoperable and scalable manner. This Software Development Toolkit is designed to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE) with easy to follow examples. 
 
 ### Contents
   
