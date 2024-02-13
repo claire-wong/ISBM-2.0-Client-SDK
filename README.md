@@ -1,6 +1,6 @@
 # ISBM-2.0-Client-SDK
 
-Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperable ecosystem to tackle industry-wide data silo challenges. It enables a cluster of devices and processes to communicate in an interoperable and scalable manner. This Software Development Toolkit is designed to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE) with easy to follow examples. 
+Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperable ecosystem to tackle industry-wide data silo challenges. It enables a cluster of IoT/IoE devices and processes to communicate in an interoperable and scalable manner. This Software Development Toolkit is designed to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE) with easy to follow examples. 
 
 ### Contents
   
@@ -23,15 +23,8 @@ The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packa
 
 ### Use Cases
 
-1. Publication-Subscription System
-
-2. Request-Response System
-
-   [Fleet Management System for Logistics](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
+#### 1. Example of using Publication-Subscription model:  [Smart Agriculture Monitoring System](Documents/Use_Cases/Smart-Agriculture-Monitoring-System.md) 
+#### 2. Example of using Request-Response model:  [Fleet Management System for Logistics](Documents/Use_Cases/Fleet_Management.md)
+#### 3. Example of using both Publication-Subscription and Request-Response models:  [Flood Management System](Documents/Use_Cases/Flood-Management.md)
  
 
-4. Mix Message System 
-
-    A [Fleet Management](https://github.com/claire-wong/ISBM-2.0-Client-SDK/Documents/Use_Cases/Fleet_Management.md)
-
-[Fleet Management](/Documents/Use_Cases/Fleet_Management.md)
