@@ -16,10 +16,10 @@ In this scenario, a smart flood management system integrates various IoT devices
 ### Message Flows
 #### Publication Method:
 
-    1. Water Level Sensors continuously monitor water levels and publish data to the Centralized Monitoring Center and other relevant stakeholders.
-    2. Weather Services publish meteorological data such as rainfall intensity and weather forecasts to the Centralized Monitoring Center.
-    3. The Centralized Monitoring Center subscribes to data streams from sensors and weather services, aggregating and analyzing the information to assess flood risk levels and predict potential flood events.
-    4. Based on flood predictions and risk assessments, the Centralized Monitoring Center publishes alerts and advisories to alert systems, emergency response teams, and residents in flood-prone areas, informing them about potential flood risks and recommending preventive measures or evacuation procedures.
+   1. Water Level Sensors continuously monitor water levels and publish data to the Centralized Monitoring Center and other relevant stakeholders.
+   2. Weather Services publish meteorological data such as rainfall intensity and weather forecasts to the Centralized Monitoring Center.
+   3. The Centralized Monitoring Center subscribes to data streams from sensors and weather services, aggregating and analyzing the information to assess flood risk levels and predict potential flood events.
+   4. Based on flood predictions and risk assessments, the Centralized Monitoring Center publishes alerts and advisories to alert systems, emergency response teams, and residents in flood-prone areas, informing them about potential flood risks and recommending preventive measures or evacuation procedures.
 
 #### Request-Response Method:
 
