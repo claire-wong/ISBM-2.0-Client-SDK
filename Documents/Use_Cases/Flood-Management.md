@@ -23,12 +23,12 @@ In this scenario, a smart flood management system integrates various IoT devices
 
 #### Request-Response Method:
 
-    1. Emergency response teams can send request messages to the Centralized Monitoring Center, requesting real-time updates on flood conditions, evacuation routes, and resource allocation.
-    2. The Centralized Monitoring Center processes the request messages and sends response messages back to the emergency response teams, providing them with the requested information and coordinating response efforts.
-    3. Residents in flood-prone areas can also use mobile apps or web interfaces to send request messages to the Centralized Monitoring Center, requesting flood alerts, evacuation guidance, or assistance from emergency services.
-    4. The Centralized Monitoring Center responds to resident requests by providing relevant information, issuing alerts, and coordinating rescue and relief operations as needed.
+   1. Emergency response teams can send request messages to the Centralized Monitoring Center, requesting real-time updates on flood conditions, evacuation routes, and resource allocation.
+   2. The Centralized Monitoring Center processes the request messages and sends response messages back to the emergency response teams, providing them with the requested information and coordinating response efforts.
+   3. Residents in flood-prone areas can also use mobile apps or web interfaces to send request messages to the Centralized Monitoring Center, requesting flood alerts, evacuation guidance, or assistance from emergency services.
+   4. The Centralized Monitoring Center responds to resident requests by providing relevant information, issuing alerts, and coordinating rescue and relief operations as needed.
 
-    In this scenario, the smart flood management system leverages IoT devices, flood prediction models, and communication channels to enable proactive flood monitoring, prediction, and response, enhancing community resilience and reducing the impact of flood disasters.
+In this scenario, the smart flood management system leverages IoT devices, flood prediction models, and communication channels to enable proactive flood monitoring, prediction, and response, enhancing community resilience and reducing the impact of flood disasters.
 
 
 
