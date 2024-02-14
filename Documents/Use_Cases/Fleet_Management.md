@@ -23,10 +23,11 @@ In this scenario, a fleet management system helps logistics companies monitor an
    7. The Maintenance System periodically sends request messages to each vehicle in the fleet, requesting vehicle status updates and operation data.
    8. If a vehicle requires scheduled or unscheduled maintenance based on vehicle health prediction, the maintenance system sends a maintenance request to the Fleet Management Server, requesting route adjustment for the affected vehicle.
 
-Benefits:
+### Benefits
 
-Efficient route management: The system optimizes route assignments based on vehicle availability, current location, and delivery schedules, minimizing fuel consumption and delivery times.
-Enhanced driver communication: Drivers can receive real-time instructions and updates via the mobile app, improving coordination and response to unexpected situations on the road.
-Proactive maintenance: By monitoring vehicle status and maintenance schedules, the system helps prevent breakdowns and ensures that vehicles are properly serviced, reducing downtime and maintenance costs.
-Data-driven decision-making: Logistics companies can analyze vehicle performance and route efficiency data to identify opportunities for optimization and cost savings.
+   1. Efficient route management: The system optimizes route assignments based on vehicle availability, current location, and delivery schedules, minimizing fuel consumption and delivery times.
+   2. Enhanced driver communication: Drivers can receive real-time instructions and updates via the mobile app, improving coordination and response to unexpected situations on the road.
+   3. Proactive maintenance: By monitoring vehicle status and maintenance schedules, the system helps prevent breakdowns and ensures that vehicles are properly serviced, reducing downtime and maintenance costs.
+   4. Data-driven decision-making: Logistics companies can analyze vehicle performance and route efficiency data to identify opportunities for optimization and cost savings.
+
 In this scenario, the request-response pattern facilitates seamless communication between dispatchers, drivers, and backend systems, enabling efficient fleet management and delivery operations in the logistics industry.
