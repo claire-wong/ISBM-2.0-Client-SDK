@@ -31,3 +31,9 @@ In this scenario, a fleet management system helps logistics companies monitor an
    4. Data-driven decision-making: Logistics companies can analyze vehicle performance and route efficiency data to identify opportunities for optimization and cost savings.
 
 In this scenario, the request-response pattern facilitates seamless communication between dispatchers, drivers, and backend systems, enabling efficient fleet management and delivery operations in the logistics industry.
+
+
+
+
+
+ Icons by [Icons8](https://icons8.com/)https://icons8.com/)
