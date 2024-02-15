@@ -27,6 +27,9 @@ In this scenario, a smart agriculture monitoring system leverages IoT devices an
    3. Cost savings: Optimized resource usage and proactive management help reduce input costs such as water, fertilizer, and pesticides.
    4. Data-driven decision-making: Farmers can make informed decisions about planting, irrigation, and crop protection strategies based on insights derived from data collected by IoT devices and sensors.
 
+In this scenario, the message bus serves as a communication backbone, enabling seamless integration and interaction between various IoT devices and systems in the smart agriculture monitoring system.
+
+
 
 
 
