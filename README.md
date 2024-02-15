@@ -5,10 +5,11 @@ Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperabl
 ### Contents
   
    1. [Objectives](#Objectives)
-   2. [Project Information](#Project-Information)
-   3. [Before Running the Program](#Before-Running-the-Program)
-   4. [Useful Links](#Useful-Links)
-   5. [Quick Reference](#Quick-Reference)
+   2. [ISBM Client Adapters Architecture](#ISBM-Client-Adapters-Architecture-Diagram)
+   3. [Project Information](#Project-Information)
+   4. [Before Running the Program](#Before-Running-the-Program)
+   5. [Useful Links](#Useful-Links)
+   6. [Quick Reference](#Quick-Reference)
 
 ### Objectives
 
