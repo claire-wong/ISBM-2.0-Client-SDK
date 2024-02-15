@@ -22,6 +22,11 @@ The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packa
 
 ![image](/Documents/Images/Architecture_Diagram1.jpg)
 
+### ISBM Message Patterns
+ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publish-subscribe (pub/sub) model and the request-response model. In the following section, a brief overview of the two message bus models will be provided.
+
+### Project Information
+
 ### Use Cases
 
 #### 1. Example of using Publication-Subscription model:  [Smart Agriculture Monitoring System](Documents/Use_Cases/Smart-Agriculture-Monitoring-System.md) 
