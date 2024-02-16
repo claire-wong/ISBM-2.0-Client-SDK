@@ -18,12 +18,21 @@ Since OIIE involves multiple industry standards at different levels of the techn
 The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packages/RapidRedPanda.ISBM.ClientAdapter/#readme-body-tab) package is designed to handle all the details of ISBM implementations for communication with ISBM servers. The ISBM interface will be accessible through object classes that developers should find user-friendly and easy to use. This will cut down the learning curve of building ISBM-compliant devices or applications.
 
       
-### ISBM Client Adapters Architecture Diagram
+#### ISBM Client Adapters Architecture Diagram
 
 ![image](/Documents/Images/Architecture_Diagram1.jpg)
 
-### ISBM Message Patterns
-ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publication-subscribe (pub/sub) model and the request-response model. In the following section, a brief overview of the two message bus models will be provided.
+### ISBM Message Models
+
+A message bus is a communication platform that allows different devices or processes to communicate with each other. It serves as a centralized hub where messages are sent and received by various systems, enabling asynchronous and decoupled communication. This architecture facilitates scalability, flexibility, and interoperability within complex cluster. ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publication-subscribe (pub/sub) model and the request-response model.
+
+#### Publication-Subscription model
+
+In this model, publishers send messages to a central message broker (ISBM Service Provider), and subscribers receive messages based on their interests or subscriptions to specific topics or channels.
+
+### ISBM Publication-Subscription Message Flow Diagram
+
+![image](/Documents/Images/Publication_Flow.jpg)
 
 ### Project Information
 
