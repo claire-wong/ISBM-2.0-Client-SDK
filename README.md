@@ -44,27 +44,33 @@ Consumer applications are devices or systems that receive messages from the the 
 
 The ISBM service provider acts as an intermediary between provider applications and consumer applications. It receives messages from publishers and distributes them to subscribers based on their subscriptions. The ISBM aervice provider manages the routing and delivery of messages, ensuring that each consumer application receives the relevant messages according to its subscriptions.
 
-#### Topics or Channels:
+#### Channels:
 
 A channel is a logical conduit which messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Channels help to categorize messages and ensure that they reach their intended recipients efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
 
-Subscribers register their interest in receiving messages related to specific topics or channels by subscribing to them.
-Subscriptions can be dynamic, allowing subscribers to subscribe or unsubscribe from topics at any time.
-Decoupling:
+#### Topics:
 
-The publish-subscribe model enables loose coupling between publishers and subscribers.
-Publishers and subscribers do not need to be aware of each other's existence, promoting scalability, flexibility, and modularity in distributed systems.
-Asynchronous Communication:
-
-Communication between publishers and subscribers is asynchronous.
-Publishers produce messages at their own pace, and subscribers consume messages as they become available in the message bus.
-Scalability and Flexibility:
-
-The publish-subscribe model is highly scalable and flexible, allowing systems to handle large volumes of messages and accommodate dynamic changes in the number of publishers and subscribers.
+A topic within the channel represents a distinct subject or category of messages that are published and subscribed to by devices or systems within a cluster. It serves as a container for related messages, organizing them based on common themes or events. Topics enable subscribers to express interest in specific types of messages and selectively consume relevant information. Messages published to a topic are broadcasted to all subscribers interested in that topic, facilitating asynchronous communication and event-driven interactions
 
 ### ISBM Publication-Subscription Message Flow Diagram
 
 ![image](/Documents/Images/Publication_Flow.jpg)
+
+#### Subscription Mechanism:
+
+Devices or systems register their interest in receiving messages related to specific channels and Topics by subscribing to them. Subscriptions can be dynamic, allowing subscribers to subscribe or unsubscribe from channel at any time.
+
+#### Decoupling:
+
+The publication-subscription model enables loose coupling between publishers and subscribers. Provider and Consumer applications do not need to be aware of each other's existence, promoting scalability, flexibility, and modularity in distributed systems.
+
+#### Asynchronous Communication:
+
+Communication between providers and consumers is asynchronous. Providers produce messages at their own pace, and consumers consume messages as they become available in the message bus.
+
+#### Scalability and Flexibility:
+
+The publication-subscription model is highly scalable and flexible, allowing systems to handle large volumes of messages and accommodate dynamic changes in the number of providers and consumers.
 
 ### Project Information
 
