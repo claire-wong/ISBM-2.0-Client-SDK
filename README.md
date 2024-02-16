@@ -28,7 +28,7 @@ A message bus is a communication platform that allows different devices or proce
 
 ### Publication-Subscription model
 
-In this model, publishers send messages to a central message broker (ISBM Service Provider), and subscribers receive messages based on their interests or subscriptions to specific topics or channels.
+In this model, providers send messages to a central message broker (ISBM Service Provider), and consumers receive messages based on their interests or subscriptions to specific channels and topics.
 
 #### Breakdown of the key components and concepts of the publish-subscribe message bus model
 
@@ -73,6 +73,12 @@ Communication between providers and consumers is asynchronous. Providers produce
 The publication-subscription model is highly scalable and flexible, allowing systems to handle large volumes of messages and accommodate dynamic changes in the number of providers and consumers.
 
 ### Request-Response model
+
+In this model, consumers send request messages to a central message broker (ISBM Service Provider), and providers receive request messages based on their services to specific channels and topics.
+
+A message bus is a communication platform that allows different devices or processes to communicate with each other
+
+The request-response message bus model is a communication pattern used in distributed systems where components or services interact by sending requests and receiving responses. This model is often used in client-server architectures, web services, and microservices-based applications. Here's a breakdown of its key components and how it operates:
 
 ### Project Information
 
