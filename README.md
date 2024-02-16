@@ -2,7 +2,7 @@
 
 Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperable ecosystem to tackle industry-wide data silo challenges. It enables a cluster of IoT/IoE devices and processes to communicate in an interoperable and scalable manner. This Software Development Toolkit is designed to assist anyone interested in trying out the Open Industrial Interoperability Ecosystem (OIIE) with easy to follow examples. 
 
-### Contents
+## Contents
   
    1. [Objectives](#Objectives)
    2. [ISBM Client Adapters Architecture](#ISBM-Client-Adapters-Architecture-Diagram)
@@ -11,7 +11,7 @@ Open Industrial Interoperability Ecosystem (OIIE) a vendor-neutral, interoperabl
    5. [Useful Links](#Useful-Links)
    6. [Quick Reference](#Quick-Reference)
 
-### Objectives
+## Objectives
 
 Since OIIE involves multiple industry standards at different levels of the technology stack, it is helpful to have a developer friendly OIIE programming interfaces. This SDK includes sample C# code projects and three flavors of ISBM 2.0 Client Adapters (RapidRedPanda.ISBM.ClientAdapter), .Net Core 3.1, .NET Standard 2.0, and .NET 6. They support a wide range of .Net implementations and OS or hardware platforms; see details in the ISBM Client Adapter Architecture Diagram. By using the adapter, you can deliver and receive CCOM messages (Common Conceptual Object Model) through ISBM services (ISA-95 Message Service Model) with just a few lines of code! It reduces the learning curve, allowing you to explore OIIE without diving into the technical details of the standards
 
@@ -22,11 +22,11 @@ The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packa
 
 ![image](/Documents/Images/Architecture_Diagram1.jpg)
 
-### ISBM Message Models
+## ISBM Message Models
 
 A message bus is a communication platform that allows different devices or processes to communicate with each other. It serves as a centralized hub where messages are sent and received by various systems, enabling asynchronous and decoupled communication. This architecture facilitates scalability, flexibility, and interoperability within complex cluster. ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publication-subscribe (pub/sub) model and the request-response model.
 
-#### Publication-Subscription model
+### Publication-Subscription model
 
 In this model, publishers send messages to a central message broker (ISBM Service Provider), and subscribers receive messages based on their interests or subscriptions to specific topics or channels.
 
@@ -52,7 +52,7 @@ A channel is a logical conduit which messages flow between different devices or 
 
 A topic within the channel represents a distinct subject or category of messages that are published and subscribed to by devices or systems within a cluster. It serves as a container for related messages, organizing them based on common themes or events. Topics enable subscribers to express interest in specific types of messages and selectively consume relevant information. Messages published to a topic are broadcasted to all subscribers interested in that topic, facilitating asynchronous communication and event-driven interactions
 
-### ISBM Publication-Subscription Message Flow Diagram
+#### ISBM Publication-Subscription Message Flow Diagram
 
 ![image](/Documents/Images/Publication_Flow.jpg)
 
@@ -71,6 +71,8 @@ Communication between providers and consumers is asynchronous. Providers produce
 #### Scalability and Flexibility:
 
 The publication-subscription model is highly scalable and flexible, allowing systems to handle large volumes of messages and accommodate dynamic changes in the number of providers and consumers.
+
+### Request-Response model
 
 ### Project Information
 
