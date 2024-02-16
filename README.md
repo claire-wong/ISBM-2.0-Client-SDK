@@ -46,11 +46,11 @@ The ISBM service provider acts as an intermediary between provider applications 
 
 #### Channels:
 
-A channel is a logical conduit which messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Channels help to categorize messages and ensure that they reach their intended recipients efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
+A channel is a logical conduit which messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Channels help to categorize messages and ensure that they reach their intended consumers efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
 
 #### Topics:
 
-A topic within the channel represents a distinct subject or category of messages that are published and subscribed to by devices or systems within a cluster. It serves as a container for related messages, organizing them based on common themes or events. Topics enable subscribers to express interest in specific types of messages and selectively consume relevant information. Messages published to a topic are broadcasted to all subscribers interested in that topic, facilitating asynchronous communication and event-driven interactions
+A topic within the channel represents a distinct subject or category of messages that are published and subscribed to by devices or systems within a cluster. It serves as a container for related messages, organizing them based on common themes or events. Topics enable consumers to express interest in specific types of messages and selectively consume relevant information. Messages published to a topic are broadcasted to all subscribers interested in that topic, facilitating asynchronous communication and event-driven interactions
 
 #### ISBM Publication-Subscription Message Flow Diagram
 
