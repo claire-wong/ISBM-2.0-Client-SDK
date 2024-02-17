@@ -24,7 +24,7 @@ The NuGet package [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packa
 
 ## ISBM Message Models
 
-A message bus is a communication platform that allows different devices or processes to communicate with each other. It serves as a centralized hub where messages are sent and received by various systems, enabling asynchronous and decoupled communication. This architecture facilitates scalability, flexibility, and interoperability within complex cluster. ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publication-subscribe (pub/sub) model and the request-response model.
+An ISBM message bus is a communication platform that allows different devices or processes to communicate with each other. It serves as a centralized hub where messages are sent and received by various systems, enabling asynchronous and decoupled communication. This architecture facilitates scalability, flexibility, and interoperability within complex cluster. ISBM 2.0 (ISA-95 Message Service Model) defines two message bus models: the publication-subscribe (pub/sub) model and the request-response model.
 
 ### Publication-Subscription model
 
