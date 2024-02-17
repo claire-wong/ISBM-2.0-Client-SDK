@@ -44,9 +44,9 @@ Consumer applications are devices or systems that receive messages from the the 
 
 The ISBM service provider acts as an intermediary between provider applications and consumer applications. It receives messages from publishers and distributes them to consumers based on their subscriptions. The ISBM aervice provider manages the routing and delivery of messages, ensuring that each consumer application receives the relevant messages according to its subscriptions.
 
-#### Channels:
+#### Publication Channels:
 
-A channel is a logical conduit which messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Channels help to categorize messages and ensure that they reach their intended consumers efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
+A publication channel is a logical conduit which published messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Publication channels help to categorize published messages and ensure that they reach their intended consumers efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
 
 #### Topics:
 
@@ -62,7 +62,7 @@ Devices or systems register their interest in receiving messages related to spec
 
 #### Decoupling:
 
-The publication-subscription model enables loose coupling between publishers and subscribers. Provider and Consumer applications do not need to be aware of each other's existence, promoting scalability, flexibility, and modularity in distributed systems.
+The publication-subscription model enables loose coupling between providers and consumers. Provider and consumer applications do not need to be aware of each other's existence, promoting scalability, flexibility, and modularity in distributed systems.
 
 #### Asynchronous Communication:
 
@@ -90,9 +90,9 @@ The provider applications are devices or systems that receive the request messag
 
 The ISBM service provider acts as an intermediary between provider applications and consumer applications. It receives request messages from consumers and distributes them to providers based on their subscriptions. The ISBM aervice provider manages the routing and delivery of messages, ensuring that each provider application receives the relevant request messages according to its subscriptions. It may route request messages to the appropriate responders based on filter expression.
 
-#### Channels:
+#### Request Channels:
 
-A channel is a logical conduit which messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Channels help to categorize messages and ensure that they reach their intended consumers efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
+A request channel is a logical conduit which request and response messages flow between different devices or systems within a cluster. It serves as a means of organizing and directing the transmission of messages, providing a structured communication conduit for exchanging information. Request channels help to categorize request and response messages and ensure that they reach their intended consumers efficiently. In messaging systems, channels play a crucial role in facilitating communication, enabling devices and systems to interact and share data seamlessly across distributed environments while maintaining scalability and flexibility in message routing and delivery.
 
 #### Topics:
 
@@ -101,6 +101,14 @@ A topic within the channel represents a distinct subject or category of messages
 #### ISBM Request-Response Message Flow Diagram
 
 ![image](/Documents/Images/Request_Response_Flow.jpg)
+
+#### Subscription Mechanism:
+
+Devices or systems register their interest in receiving request messages related to specific channels and topics by subscribing to them. Subscriptions can be dynamic, allowing subscribers to subscribe or unsubscribe from channel at any time.
+
+#### Decoupling:
+
+The request-response model enables loose coupling between consumers and providers. Consumer and provider applications do not need to be aware of each other's existence, promoting scalability, flexibility, and modularity in distributed systems.
 
 #### Asynchronous Communication:
 
