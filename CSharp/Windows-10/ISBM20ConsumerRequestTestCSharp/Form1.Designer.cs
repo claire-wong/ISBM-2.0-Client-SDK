@@ -72,7 +72,7 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(480, 522);
+            this.buttonRemove.Location = new System.Drawing.Point(364, 522);
             this.buttonRemove.Name = "buttonRemove";
             this.buttonRemove.Size = new System.Drawing.Size(106, 41);
             this.buttonRemove.TabIndex = 115;
@@ -91,7 +91,7 @@
             // 
             // buttonRead
             // 
-            this.buttonRead.Location = new System.Drawing.Point(373, 522);
+            this.buttonRead.Location = new System.Drawing.Point(257, 522);
             this.buttonRead.Name = "buttonRead";
             this.buttonRead.Size = new System.Drawing.Size(101, 41);
             this.buttonRead.TabIndex = 113;
@@ -430,7 +430,7 @@
             // 
             // buttonExpireRequest
             // 
-            this.buttonExpireRequest.Location = new System.Drawing.Point(256, 522);
+            this.buttonExpireRequest.Location = new System.Drawing.Point(475, 522);
             this.buttonExpireRequest.Name = "buttonExpireRequest";
             this.buttonExpireRequest.Size = new System.Drawing.Size(111, 41);
             this.buttonExpireRequest.TabIndex = 123;
