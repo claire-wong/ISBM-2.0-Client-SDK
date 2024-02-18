@@ -10,6 +10,9 @@
  * Author: Pak Wong
  * Date Created:  2022/08/31
  * 
+ * Modified By : Claire Wong
+ * Date Modified : 2023/12/23
+ * 
  * (c) 2022
  * This code is licensed under MIT license
 */
@@ -68,12 +71,40 @@ namespace ISBM20Pi3TestCore21
 
             Thread.Sleep(1000);
 
-            while (true)
+            Boolean continueLoop = true;
+
+            // Start a separate thread for user input
+            Thread userInputThread = new Thread(() =>
+            {
+                Console.WriteLine("Press Enter to stop the publication!");
+                Console.ReadLine();
+                continueLoop = false;
+            });
+            userInputThread.Start();
+
+            while (continueLoop)
             {
                 PublishBOD();
                 Thread.Sleep(5000);
             }
 
+            // Calling ISBM Adaper method
+            ClosePublicationSessionResponse myClosePublicationSessionResponse = _myProviderPublicationService.ClosePublicationSession(_hostName, _sessionId);
+
+            //ISBM Adapter Response
+            if (myClosePublicationSessionResponse.StatusCode == 204)
+            {
+                Console.WriteLine("The Provider Request Session is closed sucessfully!");
+                Console.WriteLine(" ");
+            }
+            else
+            {
+                Console.WriteLine("ISBM HTTP Response : " + myClosePublicationSessionResponse.ISBMHTTPResponse);
+                Console.WriteLine(" ");
+            }
+
+            Console.WriteLine("Press Enter to end program!");
+            string key = Console.ReadKey().Key.ToString();
 
         }
 
