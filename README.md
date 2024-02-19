@@ -127,12 +127,39 @@ The response message contains the result of the operation performed by the provi
 
 The ISBM request-response model is in asynchronous mode, which means that the sender of a request message does not need to wait for an immediate response from the provider. This asynchronous nature helps to avoid some of the latency and performance overhead associated with synchronous request-response models. In a synchronous model, the sender typically waits for a response from the provider before continuing with further processing, which can introduce delays and impact system performance, especially in distributed environments or when dealing with high message volumes. However, in an asynchronous model like ISBM, the sender can continue with other tasks or processes while waiting for the response, which can help improve system efficiency and responsiveness.
 
-### Project Information
-
 ### Use Cases
 
 #### 1. Example of using Publication-Subscription model:  [Smart Agriculture Monitoring System](Documents/Use_Cases/Smart-Agriculture-Monitoring-System.md) 
 #### 2. Example of using Request-Response model:  [Fleet Management System for Logistics](Documents/Use_Cases/Fleet_Management.md)
 #### 3. Example of using both Publication-Subscription and Request-Response models:  [Flood Management System](Documents/Use_Cases/Flood-Management.md)
+
+### Project Information
+
+## Under construction
+
+### Before Running the Program
+
+## Under construction
+
+### Useful Links
+
+#### Standard Organizations
+   1. [OpenO&M](https://openoandm.org/)
+   2. [MIMOSA](https://www.mimosa.org/)
+   3. [International Society of Automation](https://www.isa.org/)
+   4. [OAGi](https://oagi.org/)
+
+#### Development Tools
+   1. [Visual Studio 2022](https://visualstudio.microsoft.com/downloads/)
+   2. [RapidRedPanda.ISBM.ClientAdapter](https://www.nuget.org/packages/RapidRedPanda.ISBM.ClientAdapter/#readme-body-tab)
+   
+
+### Quick Reference
+
+   1. OIIE - [OpenO&M Open Industrial Interoperability Ecosystem](https://www.mimosa.org/open-industrial-interoperability-ecosystem-oiie/)
+   2. ISBM - [International Society of Automation ISA-95 Message Service Model](https://openoandm.org/files/standards/ISBM-2.0.pdf)
+   3. CCOM - [MIMOSA Common Conceptual Object Model](https://www.mimosa.org/mimosa-ccom/)
+   4. BOD - [OAGIS Business Object Document](https://www.oagidocs.org/docs/)
+
  
 
